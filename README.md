@@ -114,6 +114,6 @@ docker compose up --build -d
 ```
 
 Open http://localhost:8080. For Vercel, import this repository with Root Directory
-`.` and Framework Preset **Other**; `Dockerfile.vercel` builds and serves the
+`.` and Framework Preset **Container**; `Dockerfile.vercel` builds and serves the
 website. See [deployment instructions](docs/deployment.md) for container and
 static Vite options, and how to refresh the deployed data.

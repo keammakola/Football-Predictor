@@ -4,12 +4,12 @@
 
 The root `Dockerfile.vercel` builds the React website with Node 22 and serves the
 result through Nginx on port 80. Vercel detects that filename and deploys the
-image as a container-backed Function. The root `vercel.json` disables frontend
-framework auto-detection because the Dockerfile owns the build.
+image as a container-backed Function. The root `vercel.json` selects the Container framework because the Dockerfile
+owns the build.
 
 1. Import `keammakola/Football-Predictor` into Vercel.
 2. Use the repository root (`.`) as the Root Directory, not `frontend/`.
-3. Keep the Framework Preset as **Other**. The container performs `npm ci` and
+3. Use the **Container** framework preset. The container performs `npm ci` and
    `npm run build`; do not set a separate Vite output directory.
 4. Keep the default HTTP port 80 and deploy.
 
