@@ -27,9 +27,9 @@ reproducibility and compatibility with the existing scripts.
 
 `run_baseline.py` and `run_comparison.py` support model comparisons.
 `paper_trading.py` and `injury_snapshot.py` support ledger and availability work.
-The Streamlit scripts, Docker files, and earlier daily automation are supporting
-interfaces; the React website and `generate_upcoming.py` are the current website
-workflow. Keeping these scripts does not imply they have all been validated as
+The Streamlit scripts and earlier daily automation are supporting interfaces.
+The Dockerfiles serve the React website; the React frontend and
+`generate_upcoming.py` are the current website workflow. Keeping these scripts does not imply they have all been validated as
 production entry points.
 
 `tests/` contains isolated fixtures and regression checks. `docs/xg-data.md`

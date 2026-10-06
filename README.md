@@ -101,3 +101,14 @@ datasets and services retain their providers' terms.
 See [the repository guide](docs/repository-guide.md) for active scripts, generated
 artifacts, and supporting tools. Historical design notes and abandoned prototypes
 are preserved in `docs/archive/`; `frontend/` is the active website.
+
+## Docker and Vercel
+
+```bash
+docker compose up --build -d
+```
+
+Open http://localhost:8080. For Vercel, import this repository with Root Directory
+`.` and Framework Preset **Other**; `Dockerfile.vercel` builds and serves the
+website. See [deployment instructions](docs/deployment.md) for container and
+static Vite options, and how to refresh the deployed data.

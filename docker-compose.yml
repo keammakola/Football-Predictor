@@ -1,18 +1,8 @@
-version: '3.8'
-
 services:
-  predictor:
-    build: .
-    container_name: football_predictor
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "8501:8501"
-    volumes:
-      # Persist downloaded raw match data
-      - ./data:/app/data
-      # Persist trained models and Dixon-Coles parameters
-      - ./*.json:/app/*.json
-      # Persist the paper trading ledger so it survives container restarts
-      - ./paper_trades.csv:/app/paper_trades.csv
+      - "127.0.0.1:8080:80"
     restart: unless-stopped
-    environment:
-      - PYTHONUNBUFFERED=1

@@ -12,7 +12,7 @@ function App() {
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase">The Football Experiment</h1>
           <p className="text-muted text-sm mt-2 max-w-xl leading-relaxed">I built a prediction bot to find out why winning picks still lose money.</p>
         </div>
-        <nav className="flex gap-6 text-sm font-bold mt-6 md:mt-0 uppercase tracking-wide">
+        <nav className="flex flex-wrap gap-6 text-sm font-bold mt-6 md:mt-0 uppercase tracking-wide">
           <button
             onClick={() => setActiveTab('main')}
             className={`hover:text-accent transition-colors ${activeTab === 'main' ? 'text-ink border-b-2 border-ink' : 'text-muted'}`}
@@ -25,6 +25,7 @@ function App() {
           >
             Behind the Model
           </button>
+          <a href="https://github.com/keammakola/Football-Predictor" target="_blank" rel="noreferrer" className="text-muted hover:text-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">GitHub</a>
         </nav>
       </header>
 
@@ -71,7 +72,7 @@ function App() {
         </div>
       </div>
 
-      <footer className="w-full max-w-7xl mt-8 pt-6 border-t-2 border-dashed border-line text-sm font-mono text-muted flex justify-between">
+      <footer className="w-full max-w-7xl mt-8 pt-6 border-t-2 border-dashed border-line text-sm font-mono text-muted flex flex-wrap gap-4 justify-between">
         <a href="https://keabetswe.online" target="_blank" rel="noreferrer" className="hover:text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">My portfolio: keabetswe.online</a>
         <span>THE HOUSE ALWAYS WINS</span>
       </footer>

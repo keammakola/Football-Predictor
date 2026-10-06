@@ -1,5 +1,7 @@
-# Allow only inputs required to build the website.
+# Upload only the website container inputs to Vercel.
 **
+!.dockerignore
+!vercel.json
 !Dockerfile
 !Dockerfile.vercel
 !deploy/
