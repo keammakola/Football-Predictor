@@ -73,7 +73,7 @@ function App() {
       </div>
 
       <footer className="w-full max-w-7xl mt-8 pt-6 border-t-2 border-dashed border-line text-sm font-mono text-muted flex flex-wrap gap-4 justify-between">
-        <a href="https://keabetswe.online" target="_blank" rel="noreferrer" className="hover:text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">My portfolio: keabetswe.online</a>
+        <a href="https://keabetswe.online" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center border-2 border-ink bg-ink px-5 py-2 font-bold text-surface hover:bg-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">My Portfolio</a>
         <span>THE HOUSE ALWAYS WINS</span>
       </footer>
     </div>
