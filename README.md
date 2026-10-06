@@ -47,8 +47,8 @@ python3.14 -m venv .venv
 ```
 
 Frontend checks are `npm run lint` and `npm run build` inside `frontend/`.
-CI runs both frontend checks, all Python tests and snapshot validation on pushes
-and pull requests. `requirements-lock.txt` records the tested Linux Python
+CI is configured for both frontend checks, all Python tests and snapshot
+validation on pushes and pull requests. `requirements-lock.txt` records the tested Linux Python
 environment; `frontend/package-lock.json` locks the frontend dependencies.
 
 To create a new research run from cached observed data:
@@ -64,6 +64,12 @@ The backtest writes a hash-linked run record; the publisher stages and validates
 the full bundle before replacing public files. New research uses model 2.0 with
 11 observed-history features. The frozen model 1.0 snapshot remains intact apart
 from the documented headline revision.
+
+Hosted CI is currently blocked by a GitHub account billing lock: the first
+[repository-check run](https://github.com/keammakola/Football-Predictor/actions/runs/37494816196)
+could not start either job. On 6 October 2026, a clean local installation passed
+all 29 tests and snapshot verification; frontend lint and build also passed.
+The account owner must resolve the lock before hosted checks can execute.
 
 ## Models and data
 

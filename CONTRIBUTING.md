@@ -31,8 +31,10 @@ needed for the historical website or isolated tests.
 ## Before opening a pull request
 
 Run `npm run lint` and `npm run build` inside `frontend/`, and run the Python
-checks above. CI runs these checks on pushes to main and pull requests; pytest
+checks above. CI is configured for these checks on pushes to main and pull requests; pytest
 also collects the function-based chronology tests that unittest discovery misses.
+Hosted CI currently cannot start because GitHub reports an account billing lock.
+Use the local checks until the account owner resolves that restriction.
 
 Explain the problem, change and verification in the PR. Include screenshots for
 visible UI changes. Keep provider data and model changes separate from styling
