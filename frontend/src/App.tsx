@@ -1,25 +1,80 @@
-import { MarginXRay } from './components/MarginXRay';
+import { useState } from 'react';
+import { MainPage } from './components/MainPage';
+import { TechnicalPage } from './components/TechnicalPage';
 
 function App() {
+  const [activeTab, setActiveTab] = useState<'main' | 'technical'>('main');
+
   return (
-    <div className="p-8 flex flex-col items-center">
-      <header className="w-full max-w-6xl flex justify-between items-center mb-16">
-        <h1 className="text-[30px] font-bold font-serif">THE HOUSE ALWAYS WINS</h1>
-        <nav className="flex gap-6 text-sm font-medium">
-          <a href="#" className="hover:underline">Predictions</a>
-          <a href="#" className="hover:underline">Margin X-Ray</a>
-          <a href="#" className="hover:underline">About</a>
+    <div className="min-h-screen p-4 md:p-12 flex flex-col items-center">
+      <header className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-baseline mb-12 border-b-4 border-ink pb-6">
+        <div>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase">The Football Experiment</h1>
+          <p className="text-muted text-sm mt-2 max-w-xl leading-relaxed">I built a prediction bot to find out why winning picks still lose money.</p>
+        </div>
+        <nav className="flex gap-6 text-sm font-bold mt-6 md:mt-0 uppercase tracking-wide">
+          <button
+            onClick={() => setActiveTab('main')}
+            className={`hover:text-accent transition-colors ${activeTab === 'main' ? 'text-ink border-b-2 border-ink' : 'text-muted'}`}
+          >
+            Overview
+          </button>
+          <button
+            onClick={() => setActiveTab('technical')}
+            className={`hover:text-accent transition-colors ${activeTab === 'technical' ? 'text-ink border-b-2 border-ink' : 'text-muted'}`}
+          >
+            Behind the Model
+          </button>
         </nav>
       </header>
 
-      <main className="w-full max-w-6xl">
-        <h1 className="text-[44px] font-bold mb-6 font-serif">AFL Margin X-Ray</h1>
-        <p className="mb-12 text-lg text-gray-700 max-w-3xl">
-          Visualise the probability distribution of margins for AFL matches using our state-of-the-art predictive model. Explore the exact odds behind each possible outcome.
-        </p>
+      <main className="w-full max-w-7xl">
+        {activeTab === 'main' && <MainPage />}
 
-        <MarginXRay />
+        {activeTab === 'technical' && <TechnicalPage />}
       </main>
+
+      {/* Responsible Gambling Disclaimer */}
+      <div className="w-full max-w-7xl mt-16 border-2 border-ink bg-surface shadow-[6px_6px_0px_0px_rgba(17,24,39,1)]">
+        <div className="bg-ink text-surface font-mono text-xs uppercase tracking-widest px-6 py-3 flex items-center gap-3">
+          <span className="text-cost font-bold text-sm">⚠</span>
+          <span>Responsible Gambling</span>
+        </div>
+        <div className="p-6">
+          <p className="font-sans text-sm text-ink leading-relaxed mb-4">
+            <strong>This site is for educational and informational purposes only.</strong> It exists to demonstrate why it is mathematically difficult to profit from sports betting, not to encourage you to gamble. No content here constitutes financial or betting advice.
+          </p>
+          <p className="font-sans text-sm text-ink leading-relaxed mb-6">
+            Gambling can be addictive. Only ever gamble with money you can afford to lose. If you or someone you know is struggling with gambling, free and confidential help is available 24/7:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
+            {[
+              { name: 'BeGambleAware', region: 'UK', url: 'https://www.begambleaware.org', phone: '0808 8020 133' },
+              { name: 'GamCare', region: 'UK', url: 'https://www.gamcare.org.uk', phone: '0808 8020 133' },
+              { name: 'Gamblers Anonymous', region: 'International', url: 'https://www.gamblersanonymous.org', phone: 'Find local chapter' },
+              { name: 'National Council on Problem Gambling', region: 'US', url: 'https://www.ncpgambling.org', phone: '1-800-522-4700' },
+              { name: 'National Responsible Gambling Programme', region: 'South Africa', url: 'https://www.responsiblegambling.org.za', phone: '0800 006 008' },
+            ].map((org) => (
+              <a
+                key={org.name}
+                href={org.url}
+                target="_blank"
+                rel="noreferrer"
+                className="block border-2 border-ink p-4 hover:bg-bg transition-colors group"
+              >
+                <div className="font-mono text-xs text-muted uppercase tracking-wider mb-1">{org.region}</div>
+                <div className="font-sans font-bold text-sm text-ink group-hover:text-accent transition-colors mb-2">{org.name}</div>
+                <div className="font-mono text-xs text-muted">{org.phone}</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <footer className="w-full max-w-7xl mt-8 pt-6 border-t-2 border-dashed border-line text-sm font-mono text-muted flex justify-between">
+        <a href="https://keabetswe.online" target="_blank" rel="noreferrer" className="hover:text-accent underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">My portfolio: keabetswe.online</a>
+        <span>THE HOUSE ALWAYS WINS</span>
+      </footer>
     </div>
   )
 }

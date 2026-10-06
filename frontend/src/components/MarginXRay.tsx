@@ -1,156 +1,42 @@
-import React, { useState } from 'react';
-import {
-  calculateImplied,
-  calculateOverround,
-  calculateMarginFreeProportional,
-  calculateFairOdds
-} from '../utils/math';
+import { useState } from 'react';
+import type { MarketSelection } from './TechnicalTools';
 
-export const MarginXRay: React.FC = () => {
-  const [oddsStr, setOddsStr] = useState({
-    home: '1.60',
-    draw: '4.20',
-    away: '5.50',
-  });
+const outcomes = ['home', 'draw', 'away'] as const;
+const labels = { home: 'Home win', draw: 'Draw', away: 'Away win' };
+const initialOdds = { home: '2.50', draw: '3.30', away: '2.80' };
+const pct = (n: number) => `${(n * 100).toFixed(1)}%`;
 
-  const handleOddsChange = (key: 'home' | 'draw' | 'away', value: string) => {
-    setOddsStr((prev) => ({ ...prev, [key]: value }));
-  };
-
-  const oddsNum = {
-    home: parseFloat(oddsStr.home) || 0,
-    draw: parseFloat(oddsStr.draw) || 0,
-    away: parseFloat(oddsStr.away) || 0,
-  };
-
-  const implied = {
-    home: calculateImplied(oddsNum.home),
-    draw: calculateImplied(oddsNum.draw),
-    away: calculateImplied(oddsNum.away),
-  };
-
-  const overround = calculateOverround([implied.home, implied.draw, implied.away]);
-
-  const marginFree = {
-    home: calculateMarginFreeProportional(implied.home, overround),
-    draw: calculateMarginFreeProportional(implied.draw, overround),
-    away: calculateMarginFreeProportional(implied.away, overround),
-  };
-
-  const fairOdds = {
-    home: calculateFairOdds(marginFree.home),
-    draw: calculateFairOdds(marginFree.draw),
-    away: calculateFairOdds(marginFree.away),
-  };
-
-  const expectedCost = (overround / (1 + overround)) * 100;
-  const totalImplied = 1 + overround;
-
-  const formatPct = (val: number) => (val * 100).toFixed(2) + '%';
-  const formatOdds = (val: number) => val.toFixed(2);
+export function MarginXRay({ market }: { market?: MarketSelection }) {
+  const [odds, setOdds] = useState(market ? { home: String(market.home), draw: String(market.draw), away: String(market.away) } : initialOdds);
+  const [match, setMatch] = useState(market?.match || '');
+  const values = outcomes.map(key => Number(odds[key]));
+  const valid = values.every(n => Number.isFinite(n) && n > 1);
+  const total = valid ? values.reduce((sum, n) => sum + 1 / n, 0) : 0;
+  const margin = total - 1;
+  const rows = outcomes.map((key, index) => ({ key, implied: valid ? 1 / values[index] : 0, probability: valid ? 1 / values[index] / total : 0 }));
 
   return (
-    <div className="bg-surface border border-line rounded-[10px] p-8 shadow-sm">
-      <h2 className="text-2xl font-bold mb-6">Margin X-Ray</h2>
-
-      {/* Inputs */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div>
-          <label className="block text-sm font-medium mb-1 text-muted">Home Odds</label>
-          <input
-            type="number"
-            step="0.01"
-            className="w-full bg-background border border-line rounded px-3 py-2 text-text focus:outline-none focus:border-brand"
-            value={oddsStr.home}
-            onChange={(e) => handleOddsChange('home', e.target.value)}
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1 text-muted">Draw Odds</label>
-          <input
-            type="number"
-            step="0.01"
-            className="w-full bg-background border border-line rounded px-3 py-2 text-text focus:outline-none focus:border-brand"
-            value={oddsStr.draw}
-            onChange={(e) => handleOddsChange('draw', e.target.value)}
-          />
-        </div>
-        <div>
-          <label className="block text-sm font-medium mb-1 text-muted">Away Odds</label>
-          <input
-            type="number"
-            step="0.01"
-            className="w-full bg-background border border-line rounded px-3 py-2 text-text focus:outline-none focus:border-brand"
-            value={oddsStr.away}
-            onChange={(e) => handleOddsChange('away', e.target.value)}
-          />
-        </div>
+    <section id="margin-calculator" className="market-workbench" aria-labelledby="calculator-title">
+      <div className="market-input-panel">
+        <div className="tool-title"><span className="tool-symbol" aria-hidden="true">⅟</span><div><h3 id="calculator-title">Margin X-Ray</h3><p>A clearer view of the 1X2 market</p></div></div>
+        <p className="input-description">Enter decimal odds for all three outcomes to estimate the market’s probabilities with the margin removed.</p>
+        {match && <div className="loaded-match">Loaded: {match}</div>}
+        <div className="market-fields">{outcomes.map(key => {
+          const invalid = !Number.isFinite(Number(odds[key])) || Number(odds[key]) <= 1;
+          return <div key={key}><label htmlFor={`odds-${key}`}>{labels[key]}</label><div className="odds-field"><span aria-hidden="true">{key === 'home' ? '1' : key === 'draw' ? 'X' : '2'}</span><input id={`odds-${key}`} type="number" inputMode="decimal" min="1.01" step="0.01" value={odds[key]} aria-invalid={invalid} aria-describedby={invalid ? 'odds-error' : undefined} onChange={e => setOdds(prev => ({ ...prev, [key]: e.target.value }))} /></div></div>;
+        })}</div>
+        {!valid && <p className="tools-error" id="odds-error" role="alert">Enter a finite decimal odd greater than 1 for every outcome.</p>}
+        <button className="reset-button" onClick={() => { setOdds(initialOdds); setMatch(''); }}>Reset to example</button>
+        <div className="method-note"><strong>How it works</strong><p>Each implied probability (1 ÷ odds) is divided by their total. This proportional method estimates fair probabilities; it doesn’t establish the true chance of a result.</p></div>
       </div>
-
-      {/* Table */}
-      <div className="mb-8 overflow-x-auto">
-        <table className="w-full text-left border-collapse">
-          <thead>
-            <tr className="border-b border-line text-sm text-muted">
-              <th className="py-2 font-medium">Outcome</th>
-              <th className="py-2 font-medium">Odds</th>
-              <th className="py-2 font-medium">Implied</th>
-              <th className="py-2 font-medium">Margin-free</th>
-              <th className="py-2 font-medium">Fair odds</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-b border-line">
-              <td className="py-3 font-medium">Home</td>
-              <td className="py-3">{oddsStr.home}</td>
-              <td className="py-3">{formatPct(implied.home)}</td>
-              <td className="py-3 text-brand">{formatPct(marginFree.home)}</td>
-              <td className="py-3 text-brand">{formatOdds(fairOdds.home)}</td>
-            </tr>
-            <tr className="border-b border-line">
-              <td className="py-3 font-medium">Draw</td>
-              <td className="py-3">{oddsStr.draw}</td>
-              <td className="py-3">{formatPct(implied.draw)}</td>
-              <td className="py-3 text-brand">{formatPct(marginFree.draw)}</td>
-              <td className="py-3 text-brand">{formatOdds(fairOdds.draw)}</td>
-            </tr>
-            <tr>
-              <td className="py-3 font-medium">Away</td>
-              <td className="py-3">{oddsStr.away}</td>
-              <td className="py-3">{formatPct(implied.away)}</td>
-              <td className="py-3 text-brand">{formatPct(marginFree.away)}</td>
-              <td className="py-3 text-brand">{formatOdds(fairOdds.away)}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="market-results-panel">
+        <div className="results-heading"><h4>Market breakdown</h4><span className={`market-status ${valid && margin < 0 ? 'underround' : ''}`}>{!valid ? 'Awaiting valid odds' : margin < -0.000001 ? 'Underround market' : margin > 0.000001 ? 'Margin detected' : 'Balanced market'}</span></div>
+        <div className="probability-strip" aria-label="Estimated margin-free probabilities">{valid ? rows.map(row => <div className={`probability-segment ${row.key}`} key={row.key} style={{ width: pct(row.probability) }} title={`${labels[row.key]}: ${pct(row.probability)}`}><span>{row.key === 'home' ? '1' : row.key === 'draw' ? 'X' : '2'}</span></div>) : <div className="probability-placeholder">Add all three odds to see the distribution</div>}</div>
+        <div className="probability-legend">{rows.map(row => <span key={row.key}><i className={row.key} />{labels[row.key]} <strong>{valid ? pct(row.probability) : '—'}</strong></span>)}</div>
+        <div className="tools-table-scroll"><table className="breakdown-table"><thead><tr><th>Outcome</th><th>Implied</th><th>Margin-free</th><th>Fair odds</th></tr></thead><tbody>{rows.map(row => <tr key={row.key}><th scope="row">{labels[row.key]}</th><td>{valid ? pct(row.implied) : '—'}</td><td>{valid ? pct(row.probability) : '—'}</td><td className="fair-odds">{valid ? (1 / row.probability).toFixed(2) : '—'}</td></tr>)}</tbody></table></div>
+        <div className="market-metrics" aria-live="polite"><div><span>Total implied probability</span><strong>{valid ? pct(total) : '—'}</strong></div><div><span>Bookmaker overround</span><strong>{valid ? pct(margin) : '—'}</strong></div></div>
+        <p className="results-note">{valid && margin < 0 ? 'The implied probabilities sum to less than 100%. Check that these odds belong to the same match and market.' : 'Overround measures how far the implied probabilities exceed 100%. Fair odds are the reciprocal of the estimated margin-free probabilities.'}</p>
       </div>
-
-      {/* Bottom Block */}
-      <div className="bg-background rounded-lg p-6 border border-line">
-        <div className="flex justify-between items-end mb-4">
-          <div>
-            <div className="text-sm text-muted mb-1">Overround (Bookmaker Margin)</div>
-            <div className="text-2xl font-bold">{formatPct(overround)}</div>
-          </div>
-          <div className="text-right">
-            <div className="text-sm text-muted mb-1">Total Implied</div>
-            <div className="text-xl">{formatPct(totalImplied)}</div>
-          </div>
-        </div>
-
-        {/* Visual Bar */}
-        <div className="h-4 w-full bg-line rounded-full overflow-hidden flex mb-4">
-          <div className="h-full bg-muted" style={{ width: `${Math.max(0, Math.min(100, (1 / totalImplied) * 100))}%` }}></div>
-          <div className="h-full bg-cost" style={{ width: `${Math.max(0, Math.min(100, (overround / totalImplied) * 100))}%` }}></div>
-        </div>
-
-        <div className="flex justify-between text-sm">
-          <span className="text-muted">Fair Market (100%)</span>
-          <span className="text-cost font-medium flex items-center gap-2">
-            Expected Cost: {expectedCost.toFixed(2)}%
-          </span>
-        </div>
-      </div>
-    </div>
+    </section>
   );
-};
+}

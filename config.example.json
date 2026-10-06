@@ -1,0 +1,12 @@
+{
+  "alert_email": "youremail@example.com",
+  "alert_recipient": "youremail@example.com",
+  "smtp_server": "smtp.example.com",
+  "smtp_port": 465,
+  "smtp_user": "smtp_user",
+  "smtp_pass": "smtp_password",
+  "email_subject": "Strong Tier Match Alert",
+  "email_enabled": false,
+  "webhook_enabled": false,
+  "webhook_url": "https://example.com/webhook"
+}

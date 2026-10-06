@@ -1,0 +1,35 @@
+{
+  "source": "Understat",
+  "fetched_at_utc": "2026-10-06T13:34:31.729730+00:00",
+  "seasons": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "matches": 4230,
+  "sha256": "547a31084376f5198ec60f4c69ab4762a8ec447cb3453b90a3a81cfffc26cb20",
+  "urls": [
+    "https://understat.com/getLeagueData/Serie_A/2015",
+    "https://understat.com/getLeagueData/Serie_A/2016",
+    "https://understat.com/getLeagueData/Serie_A/2017",
+    "https://understat.com/getLeagueData/Serie_A/2018",
+    "https://understat.com/getLeagueData/Serie_A/2019",
+    "https://understat.com/getLeagueData/Serie_A/2020",
+    "https://understat.com/getLeagueData/Serie_A/2021",
+    "https://understat.com/getLeagueData/Serie_A/2022",
+    "https://understat.com/getLeagueData/Serie_A/2023",
+    "https://understat.com/getLeagueData/Serie_A/2024",
+    "https://understat.com/getLeagueData/Serie_A/2025",
+    "https://understat.com/getLeagueData/Serie_A/2026"
+  ],
+  "date_alignment": "Unique season/home/away fixture uses results-source date; original retained in understat_date"
+}

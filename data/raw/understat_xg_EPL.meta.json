@@ -1,0 +1,35 @@
+{
+  "source": "Understat",
+  "fetched_at_utc": "2026-10-06T13:34:27.334167+00:00",
+  "seasons": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "matches": 4230,
+  "sha256": "1927d204d42608ed4776b51599fc08d6ef2f1192c11c7893596caa7f5f5a7967",
+  "urls": [
+    "https://understat.com/getLeagueData/EPL/2015",
+    "https://understat.com/getLeagueData/EPL/2016",
+    "https://understat.com/getLeagueData/EPL/2017",
+    "https://understat.com/getLeagueData/EPL/2018",
+    "https://understat.com/getLeagueData/EPL/2019",
+    "https://understat.com/getLeagueData/EPL/2020",
+    "https://understat.com/getLeagueData/EPL/2021",
+    "https://understat.com/getLeagueData/EPL/2022",
+    "https://understat.com/getLeagueData/EPL/2023",
+    "https://understat.com/getLeagueData/EPL/2024",
+    "https://understat.com/getLeagueData/EPL/2025",
+    "https://understat.com/getLeagueData/EPL/2026"
+  ],
+  "date_alignment": "Unique season/home/away fixture uses results-source date; original retained in understat_date"
+}

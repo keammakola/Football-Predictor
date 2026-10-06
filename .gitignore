@@ -1,0 +1,30 @@
+# Credentials and local settings
+.env
+.env.*
+!.env.example
+config.local.json
+config.json
+*.pem
+*.key
+.aws/
+.codex/
+.agents/
+
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

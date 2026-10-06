@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-10-06T13:52:46.476849+00:00",
+  "window_days": 30,
+  "predictions": 203,
+  "qualifying_bets": 11,
+  "leagues": [
+    {
+      "league": "EPL",
+      "fixtures": 40,
+      "predictions": 40,
+      "odds_status": "available",
+      "status": "ready"
+    },
+    {
+      "league": "LaLiga",
+      "fixtures": 41,
+      "predictions": 41,
+      "odds_status": "available",
+      "status": "ready"
+    },
+    {
+      "league": "Bundesliga",
+      "fixtures": 36,
+      "predictions": 36,
+      "odds_status": "available",
+      "status": "ready"
+    },
+    {
+      "league": "SerieA",
+      "fixtures": 50,
+      "predictions": 50,
+      "odds_status": "available",
+      "status": "ready"
+    },
+    {
+      "league": "Ligue1",
+      "fixtures": 36,
+      "predictions": 36,
+      "odds_status": "available",
+      "status": "ready"
+    }
+  ]
+}

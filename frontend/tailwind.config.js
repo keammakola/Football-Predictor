@@ -7,21 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#FAFAF7',
-        surface: '#FFFFFF',
-        ink: '#16181B',
-        muted: '#5B6168',
-        line: '#E4E4DF',
-        accent: '#2457D6',
-        hit: '#0F6CBD',
-        miss: '#C2410C',
-        cost: '#7C3AED',
-        warn: '#8A6100'
+        bg: '#F3F4F6', // light cool gray / thermal paper feel
+        surface: '#FFFFFF', // pure white
+        ink: '#111827', // near black
+        muted: '#6B7280',
+        line: '#D1D5DB', // slightly darker for sharp lines
+        accent: '#2563EB', // crisp blue
+        cost: '#DC2626', // sharp red for house margin
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        serif: ['Source Serif 4', 'Georgia', 'serif'],
-      }
+        sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
     },
   },
   plugins: [],

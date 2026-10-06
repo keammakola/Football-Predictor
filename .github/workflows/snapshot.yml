@@ -1,0 +1,27 @@
+# Free daily injury/availability snapshot. Commits new CSVs back to the repo.
+# Test it once with "Run workflow" (workflow_dispatch). If the feed rejects
+# GitHub's servers, run injury_snapshot.py on your own machine instead.
+name: daily-availability-snapshot
+on:
+  schedule:
+    - cron: "0 6 * * *"      # 06:00 UTC daily
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas requests
+      - run: python injury_snapshot.py
+      - name: Commit snapshot
+        run: |
+          git config user.name "snapshot-bot"
+          git config user.email "snapshot-bot@users.noreply.github.com"
+          git add snapshots/
+          git diff --cached --quiet || git commit -m "availability snapshot $(date -u +%F)"
+          git push

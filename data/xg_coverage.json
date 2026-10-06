@@ -1,0 +1,38 @@
+[
+  {
+    "league": "EPL",
+    "results_matches": 4230,
+    "matched_xg": 4230,
+    "unmatched": []
+  },
+  {
+    "league": "LaLiga",
+    "results_matches": 4249,
+    "matched_xg": 4249,
+    "unmatched": []
+  },
+  {
+    "league": "Bundesliga",
+    "results_matches": 3402,
+    "matched_xg": 3402,
+    "unmatched": []
+  },
+  {
+    "league": "SerieA",
+    "results_matches": 4230,
+    "matched_xg": 4230,
+    "unmatched": []
+  },
+  {
+    "league": "Ligue1",
+    "results_matches": 3902,
+    "matched_xg": 3901,
+    "unmatched": [
+      {
+        "date": "2026-08-23",
+        "HomeTeam": "Rennes",
+        "AwayTeam": "Paris SG"
+      }
+    ]
+  }
+]

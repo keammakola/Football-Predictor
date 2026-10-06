@@ -1,0 +1,35 @@
+{
+  "source": "Understat",
+  "fetched_at_utc": "2026-10-06T13:34:33.330157+00:00",
+  "seasons": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "matches": 3902,
+  "sha256": "f6f3f0ac43516eb02961410870ddd7cb3cfddcf918d1e1e6d53ac4530d71dc80",
+  "urls": [
+    "https://understat.com/getLeagueData/Ligue_1/2015",
+    "https://understat.com/getLeagueData/Ligue_1/2016",
+    "https://understat.com/getLeagueData/Ligue_1/2017",
+    "https://understat.com/getLeagueData/Ligue_1/2018",
+    "https://understat.com/getLeagueData/Ligue_1/2019",
+    "https://understat.com/getLeagueData/Ligue_1/2020",
+    "https://understat.com/getLeagueData/Ligue_1/2021",
+    "https://understat.com/getLeagueData/Ligue_1/2022",
+    "https://understat.com/getLeagueData/Ligue_1/2023",
+    "https://understat.com/getLeagueData/Ligue_1/2024",
+    "https://understat.com/getLeagueData/Ligue_1/2025",
+    "https://understat.com/getLeagueData/Ligue_1/2026"
+  ],
+  "date_alignment": "Unique season/home/away fixture uses results-source date; original retained in understat_date"
+}

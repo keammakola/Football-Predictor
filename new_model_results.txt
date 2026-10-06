@@ -1,0 +1,21 @@
+Running Strict Walk-Forward Backtest for seasons: 2122, 2223, 2324
+This will train a separate, isolated model for EVERY season to prevent data leakage...
+---------------------------------------------------------------------------
+Processing EPL...
+Processing LaLiga...
+Processing Bundesliga...
+Processing SerieA...
+Processing Ligue1...
+
+    League  Strong Bets  Wins Win Rate  Strong P/L Strong ROI
+       EPL          240   167    69.6%      175.09      73.0%
+    LaLiga          153    98    64.1%      132.10      86.3%
+Bundesliga           92    58    63.0%       82.78      90.0%
+    SerieA          187   113    60.4%      102.08      54.6%
+    Ligue1          131    88    67.2%      131.40     100.3%
+---------------------------------------------------------------------------
+STRONG TIER ONLY (+EV) - OVERALL RESULTS (Season 2526, 5 Leagues):
+Total Bets Placed: 803
+Total Wins:        524 (65.3% Win Rate)
+Total Profit/Loss: +623.45 units
+Overall ROI:       +77.6%

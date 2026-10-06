@@ -1,0 +1,595 @@
+season,league,match,tier,pick,prob,odds_taken,won,pnl
+2122,EPL,Norwich vs Liverpool,Strong,A,0.7803267530014357,1.3,1,0.30000000000000004
+2122,EPL,Southampton vs Man United,Strong,A,0.6478558015821494,1.57,0,-1.0
+2122,EPL,Norwich vs Leicester,Strong,A,0.650119535529915,1.85,1,0.8500000000000001
+2122,EPL,West Ham vs Crystal Palace,Strong,H,0.6705887298679967,1.55,0,-1.0
+2122,EPL,Southampton vs West Ham,Strong,A,0.6186222629940656,2.4,0,-1.0
+2122,EPL,Arsenal vs Norwich,Strong,H,0.7213183270152542,1.5,1,0.5
+2122,EPL,Everton vs Norwich,Strong,H,0.7105763035230837,1.61,1,0.6100000000000001
+2122,EPL,Burnley vs Norwich,Strong,H,0.6176784809476131,1.85,0,-1.0
+2122,EPL,Norwich vs Brighton,Strong,A,0.6908050247776869,2.1,0,-1.0
+2122,EPL,Arsenal vs Crystal Palace,Strong,H,0.6264046141351138,1.6,0,-1.0
+2122,EPL,Norwich vs Leeds,Strong,A,0.6350000330296317,2.1,1,1.1
+2122,EPL,Norwich vs Southampton,Strong,A,0.6638719598491635,2.05,0,-1.0
+2122,EPL,Newcastle vs Norwich,Strong,H,0.6757564443189381,1.95,0,-1.0
+2122,EPL,Man United vs Crystal Palace,Strong,H,0.7171864786494995,1.5,1,0.5
+2122,EPL,Tottenham vs Norwich,Strong,H,0.8421286287201462,1.36,1,0.3600000000000001
+2122,EPL,Arsenal vs Southampton,Strong,H,0.6247100737045043,1.61,1,0.6100000000000001
+2122,EPL,Tottenham vs Crystal Palace,Strong,H,0.6129766094187326,1.72,1,0.72
+2122,EPL,West Ham vs Southampton,Strong,H,0.6263249460562933,1.8,0,-1.0
+2122,EPL,Norwich vs Arsenal,Strong,A,0.7938649211432076,1.4,1,0.3999999999999999
+2122,EPL,Crystal Palace vs Norwich,Strong,H,0.6148578632398664,1.65,1,0.6499999999999999
+2122,EPL,Watford vs Tottenham,Strong,A,0.6345058350517263,1.61,1,0.6100000000000001
+2122,EPL,Man United vs Wolves,Strong,H,0.6549579574773902,1.53,0,-1.0
+2122,EPL,West Ham vs Norwich,Strong,H,0.8237016307734795,1.28,1,0.28
+2122,EPL,Crystal Palace vs Liverpool,Strong,A,0.6961873535915932,1.53,1,0.53
+2122,EPL,Burnley vs Man United,Strong,A,0.6867896859683307,1.61,0,-1.0
+2122,EPL,West Ham vs Watford,Strong,H,0.7152983984502294,1.55,1,0.55
+2122,EPL,Tottenham vs Southampton,Strong,H,0.6271841184151881,1.6,0,-1.0
+2122,EPL,Watford vs Brighton,Strong,A,0.6246182317672533,2.05,1,1.0499999999999998
+2122,EPL,Aston Villa vs Watford,Strong,H,0.6605062689987058,1.65,0,-1.0
+2122,EPL,Crystal Palace vs Chelsea,Strong,A,0.6989557008070391,1.65,1,0.6499999999999999
+2122,EPL,Southampton vs Norwich,Strong,H,0.7036608214213732,1.53,1,0.53
+2122,EPL,Man United vs Watford,Strong,H,0.7793515856734826,1.3,0,-1.0
+2122,EPL,Burnley vs Chelsea,Strong,A,0.6880455604491946,1.5,1,0.5
+2122,EPL,Watford vs Arsenal,Strong,A,0.7085392901042181,1.57,1,0.5700000000000001
+2122,EPL,Norwich vs Chelsea,Strong,A,0.7850816594428289,1.3,1,0.30000000000000004
+2122,EPL,Leeds vs Norwich,Strong,H,0.680974745459984,1.55,1,0.55
+2122,EPL,Crystal Palace vs Man City,Strong,A,0.7644316740413887,1.33,0,-1.0
+2122,EPL,West Ham vs Everton,Strong,H,0.6525655624577067,1.75,1,0.75
+2122,EPL,Everton vs Man United,Strong,A,0.6235919491649773,1.75,0,-1.0
+2122,EPL,Man United vs Norwich,Strong,H,0.8656010260930113,1.25,1,0.25
+2122,EPL,West Ham vs Burnley,Strong,H,0.6316536845825185,1.7,0,-1.0
+2122,EPL,Norwich vs Newcastle,Strong,A,0.7172303291182333,2.15,1,1.15
+2122,EPL,Aston Villa vs Norwich,Strong,H,0.7665834519788396,1.4,1,0.3999999999999999
+2122,EPL,Everton vs Chelsea,Strong,A,0.6130910287143684,1.75,0,-1.0
+2122,EPL,Norwich vs West Ham,Strong,A,0.7351521781964526,1.75,1,0.75
+2122,EPL,Leicester vs Norwich,Strong,H,0.7928737513156887,1.44,1,0.43999999999999995
+2122,EPL,Wolves vs Norwich,Strong,H,0.6994106111197155,1.45,0,-1.0
+2122,EPL,Watford vs Leicester,Strong,A,0.6215158663980044,1.95,1,0.95
+2122,EPL,Leicester vs Southampton,Strong,H,0.6734795188111347,1.85,1,0.8500000000000001
+2122,EPL,Norwich vs Tottenham,Strong,A,0.8126006022534811,1.25,1,0.25
+2223,EPL,Tottenham vs Southampton,Strong,H,0.7915472919980835,1.33,1,0.33000000000000007
+2223,EPL,Leicester vs Southampton,Strong,H,0.6378268319135778,1.83,0,-1.0
+2223,EPL,Man United vs Liverpool,Strong,A,0.6451164901176439,1.6,0,-1.0
+2223,EPL,Tottenham vs Fulham,Strong,H,0.7752145491610875,1.5,1,0.5
+2223,EPL,Everton vs Liverpool,Strong,A,0.7594182898647662,1.4,0,-1.0
+2223,EPL,Tottenham vs Leicester,Strong,H,0.7208177155693123,1.45,1,0.44999999999999996
+2223,EPL,Wolves vs Man City,Strong,A,0.759263822302036,1.33,1,0.33000000000000007
+2223,EPL,Man City vs Man United,Strong,H,0.7740595588533246,1.33,1,0.33000000000000007
+2223,EPL,Tottenham vs Everton,Strong,H,0.747320523545622,1.5,1,0.5
+2223,EPL,Leeds vs Arsenal,Strong,A,0.664960539710213,1.55,1,0.55
+2223,EPL,Liverpool vs West Ham,Strong,H,0.715965313933101,1.4,1,0.3999999999999999
+2223,EPL,Southampton vs Arsenal,Strong,A,0.6469522774227512,1.57,0,-1.0
+2223,EPL,Liverpool vs Leeds,Strong,H,0.8278192752731014,1.3,0,-1.0
+2223,EPL,Southampton vs Newcastle,Strong,A,0.6137639981680313,1.9,1,0.8999999999999999
+2223,EPL,Liverpool vs Southampton,Strong,H,0.8296170064795113,1.25,1,0.25
+2223,EPL,Tottenham vs Leeds,Strong,H,0.7348296802908806,1.65,1,0.6499999999999999
+2223,EPL,Aston Villa vs Liverpool,Strong,A,0.6151363443189989,1.7,1,0.7
+2223,EPL,Leeds vs Man City,Strong,A,0.7954620078592286,1.29,1,0.29000000000000004
+2223,EPL,Tottenham vs Aston Villa,Strong,H,0.6521524681403978,1.67,0,-1.0
+2223,EPL,Aston Villa vs Leeds,Strong,H,0.6020020174547022,1.91,1,0.9099999999999999
+2223,EPL,Brentford vs Southampton,Strong,H,0.6457215020835329,1.85,1,0.8500000000000001
+2223,EPL,Wolves vs Liverpool,Strong,A,0.6782600023748888,1.85,0,-1.0
+2223,EPL,Liverpool vs Everton,Strong,H,0.7904340089285075,1.5,1,0.5
+2223,EPL,Tottenham vs West Ham,Strong,H,0.6685098733180723,1.75,1,0.75
+2223,EPL,Arsenal vs Everton,Strong,H,0.7494785063587891,1.36,1,0.3600000000000001
+2223,EPL,Liverpool vs Wolves,Strong,H,0.7127149536006241,1.5,1,0.5
+2223,EPL,Chelsea vs Leeds,Strong,H,0.6559701051490854,1.62,1,0.6200000000000001
+2223,EPL,Man City vs Newcastle,Strong,H,0.6994821600864609,1.45,1,0.44999999999999996
+2223,EPL,Wolves vs Tottenham,Strong,A,0.6067153565603782,2.2,0,-1.0
+2223,EPL,Bournemouth vs Liverpool,Strong,A,0.7236310023847431,1.4,0,-1.0
+2223,EPL,Southampton vs Tottenham,Strong,A,0.6151601851680181,1.75,0,-1.0
+2223,EPL,Everton vs Tottenham,Strong,A,0.6817883034508561,2.2,0,-1.0
+2223,EPL,Southampton vs Man City,Strong,A,0.828000443368167,1.25,1,0.25
+2223,EPL,Tottenham vs Bournemouth,Strong,H,0.7369517064046089,1.45,0,-1.0
+2223,EPL,Leeds vs Liverpool,Strong,A,0.7000239171218687,1.73,1,0.73
+2223,EPL,Man City vs Leeds,Strong,H,0.8889669329241082,1.17,1,0.16999999999999993
+2223,EPL,Everton vs Man City,Strong,A,0.7930010890695568,1.36,1,0.3600000000000001
+2223,EPL,Leicester vs Liverpool,Strong,A,0.677542326918052,1.57,1,0.5700000000000001
+2223,EPL,West Ham vs Leeds,Strong,H,0.6096411351968354,2.4,1,1.4
+2223,EPL,Brighton vs Man City,Strong,A,0.6740567839329754,1.75,0,-1.0
+2223,EPL,Southampton vs Liverpool,Strong,A,0.8034632999480249,1.44,0,-1.0
+2223,EPL,Leeds vs Tottenham,Strong,A,0.6147656565745271,2.3,1,1.2999999999999998
+2223,EPL,Brentford vs Man City,Strong,A,0.7220837919740096,1.83,0,-1.0
+2324,EPL,Aston Villa vs Everton,Strong,H,0.6486016538198505,1.7,1,0.7
+2324,EPL,Brentford vs Crystal Palace,Strong,H,0.6125951241298315,2.15,0,-1.0
+2324,EPL,Brentford vs Bournemouth,Strong,H,0.6971250444102053,1.73,0,-1.0
+2324,EPL,Brentford vs Everton,Strong,H,0.6579615610268974,1.8,0,-1.0
+2324,EPL,Arsenal vs Tottenham,Strong,H,0.6101650829024616,1.67,0,-1.0
+2324,EPL,Fulham vs Sheffield United,Strong,H,0.6358636147792512,1.62,1,0.6200000000000001
+2324,EPL,Brentford vs Burnley,Strong,H,0.640130284828324,1.83,1,0.8300000000000001
+2324,EPL,Liverpool vs Everton,Strong,H,0.7556057617877947,1.33,1,0.33000000000000007
+2324,EPL,Brentford vs West Ham,Strong,H,0.6116744412453191,2.05,1,1.0499999999999998
+2324,EPL,Tottenham vs Chelsea,Strong,H,0.6687486407788439,2.0,0,-1.0
+2324,EPL,Bournemouth vs Newcastle,Strong,A,0.6594165011494647,1.73,0,-1.0
+2324,EPL,Chelsea vs Man City,Strong,A,0.6285273750993184,1.73,0,-1.0
+2324,EPL,Man United vs Bournemouth,Strong,H,0.6639406171668782,1.55,0,-1.0
+2324,EPL,Brighton vs Burnley,Strong,H,0.7385889740840106,1.5,0,-1.0
+2324,EPL,Fulham vs Burnley,Strong,H,0.6059045592237655,1.67,0,-1.0
+2324,EPL,Newcastle vs Nott'm Forest,Strong,H,0.7209658641063039,1.5,0,-1.0
+2324,EPL,Brentford vs Wolves,Strong,H,0.6088265277249719,1.95,0,-1.0
+2324,EPL,Tottenham vs Bournemouth,Strong,H,0.6906321524398199,1.75,1,0.75
+2324,EPL,Sheffield United vs West Ham,Strong,A,0.6239819573610916,2.2,0,-1.0
+2324,EPL,Bournemouth vs Liverpool,Strong,A,0.6287433567210908,1.7,1,0.7
+2324,EPL,Crystal Palace vs Sheffield United,Strong,H,0.6253896944582957,1.62,1,0.6200000000000001
+2324,EPL,Liverpool vs Chelsea,Strong,H,0.7347999405823143,1.57,1,0.5700000000000001
+2324,EPL,Sheffield United vs Aston Villa,Strong,A,0.6845064883791049,1.62,1,0.6200000000000001
+2324,EPL,Man City vs Chelsea,Strong,H,0.7749327291393955,1.33,0,-1.0
+2324,EPL,Newcastle vs Bournemouth,Strong,H,0.6602088143581816,1.83,0,-1.0
+2324,EPL,Sheffield United vs Brighton,Strong,A,0.640200607166342,1.62,1,0.6200000000000001
+2324,EPL,Aston Villa vs Nott'm Forest,Strong,H,0.6699991516891158,1.53,1,0.53
+2324,EPL,Brighton vs Everton,Strong,H,0.6333436838893106,1.83,0,-1.0
+2324,EPL,Newcastle vs Wolves,Strong,H,0.6084198844259928,1.91,1,0.9099999999999999
+2324,EPL,Nott'm Forest vs Liverpool,Strong,A,0.6628049095368336,1.53,1,0.53
+2324,EPL,Man United vs Everton,Strong,H,0.6153902872675954,1.83,1,0.8300000000000001
+2324,EPL,Brighton vs Nott'm Forest,Strong,H,0.646817325007697,1.8,1,0.8
+2324,EPL,West Ham vs Burnley,Strong,H,0.6049917886111975,1.67,0,-1.0
+2324,EPL,Newcastle vs West Ham,Strong,H,0.6068844410330427,1.83,1,0.8300000000000001
+2324,EPL,Sheffield United vs Fulham,Strong,A,0.6554108940270902,1.73,0,-1.0
+2324,EPL,Newcastle vs Everton,Strong,H,0.6748759026122961,2.0,0,-1.0
+2324,EPL,Aston Villa vs Bournemouth,Strong,H,0.6223586506461913,1.85,1,0.8500000000000001
+2324,EPL,Arsenal vs Chelsea,Strong,H,0.7177136514878527,1.44,1,0.43999999999999995
+2122,LaLiga,Alaves vs Real Madrid,Strong,A,0.7167466906446365,1.44,1,0.43999999999999995
+2122,LaLiga,Sociedad vs Vallecano,Strong,H,0.7079662746246891,1.44,1,0.43999999999999995
+2122,LaLiga,Levante vs Real Madrid,Strong,A,0.6925150060071439,1.6,0,-1.0
+2122,LaLiga,Elche vs Sevilla,Strong,A,0.6191264572041892,1.72,0,-1.0
+2122,LaLiga,Ath Madrid vs Villarreal,Strong,H,0.6009284227537488,1.75,0,-1.0
+2122,LaLiga,Barcelona vs Getafe,Strong,H,0.7209691512186868,1.4,1,0.3999999999999999
+2122,LaLiga,Espanol vs Ath Madrid,Strong,A,0.7092934105500028,1.9,1,0.8999999999999999
+2122,LaLiga,Ath Madrid vs Ath Bilbao,Strong,H,0.6673982871854325,1.65,0,-1.0
+2122,LaLiga,Betis vs Espanol,Strong,H,0.652764095274397,2.0,0,-1.0
+2122,LaLiga,Sevilla vs Espanol,Strong,H,0.7445943554334915,1.57,1,0.5700000000000001
+2122,LaLiga,Barcelona vs Levante,Strong,H,0.7936972423560371,1.4,1,0.3999999999999999
+2122,LaLiga,Betis vs Getafe,Strong,H,0.6433469009120586,1.75,1,0.75
+2122,LaLiga,Celta vs Granada,Strong,H,0.6574494745620817,1.61,1,0.6100000000000001
+2122,LaLiga,Betis vs Vallecano,Strong,H,0.6047306054322448,1.83,1,0.8300000000000001
+2122,LaLiga,Sevilla vs Levante,Strong,H,0.7207908260702021,1.44,1,0.43999999999999995
+2122,LaLiga,Vallecano vs Barcelona,Strong,A,0.6205660972484563,1.8,0,-1.0
+2122,LaLiga,Levante vs Ath Madrid,Strong,A,0.6719384278746522,1.65,0,-1.0
+2122,LaLiga,Barcelona vs Alaves,Strong,H,0.7859812519230571,1.28,0,-1.0
+2122,LaLiga,Real Madrid vs Vallecano,Strong,H,0.8137809813011603,1.33,1,0.33000000000000007
+2122,LaLiga,Villarreal vs Getafe,Strong,H,0.6703750803928359,1.5,1,0.5
+2122,LaLiga,Sevilla vs Alaves,Strong,H,0.7025465964123325,1.44,0,-1.0
+2122,LaLiga,Granada vs Real Madrid,Strong,A,0.7273243656660755,1.45,1,0.44999999999999996
+2122,LaLiga,Betis vs Levante,Strong,H,0.6607001208072117,1.66,1,0.6599999999999999
+2122,LaLiga,Cadiz vs Ath Madrid,Strong,A,0.6984301389830594,1.5,1,0.5
+2122,LaLiga,Real Madrid vs Ath Bilbao,Strong,H,0.7282658156851798,1.44,1,0.43999999999999995
+2122,LaLiga,Ath Madrid vs Mallorca,Strong,H,0.7789411687319391,1.3,0,-1.0
+2122,LaLiga,Valencia vs Elche,Strong,H,0.6108388982932226,1.75,1,0.75
+2122,LaLiga,Barcelona vs Elche,Strong,H,0.8049161569241361,1.3,1,0.30000000000000004
+2122,LaLiga,Real Madrid vs Cadiz,Strong,H,0.8596713115577894,1.2,0,-1.0
+2122,LaLiga,Getafe vs Real Madrid,Strong,A,0.6295786446672452,1.65,0,-1.0
+2122,LaLiga,Cadiz vs Sevilla,Strong,A,0.649063577992358,1.85,1,0.8500000000000001
+2122,LaLiga,Real Madrid vs Valencia,Strong,H,0.7556323909842032,1.37,1,0.3700000000000001
+2122,LaLiga,Sevilla vs Getafe,Strong,H,0.6940278221167702,1.61,1,0.6100000000000001
+2122,LaLiga,Alaves vs Barcelona,Strong,A,0.6686355763276538,1.57,1,0.5700000000000001
+2122,LaLiga,Real Madrid vs Granada,Strong,H,0.8257401606235222,1.25,1,0.25
+2122,LaLiga,Sevilla vs Elche,Strong,H,0.7282435746429828,1.45,1,0.44999999999999996
+2122,LaLiga,Espanol vs Barcelona,Strong,A,0.6566844474640972,1.75,0,-1.0
+2122,LaLiga,Ath Madrid vs Levante,Strong,H,0.7826198176486925,1.33,0,-1.0
+2122,LaLiga,Real Madrid vs Alaves,Strong,H,0.8546563936851463,1.22,1,0.21999999999999997
+2122,LaLiga,Espanol vs Sevilla,Strong,A,0.6386442997339277,2.2,0,-1.0
+2122,LaLiga,Betis vs Mallorca,Strong,H,0.6280668516985148,1.6,1,0.6000000000000001
+2122,LaLiga,Celta vs Levante,Strong,H,0.6896979667034928,1.6,0,-1.0
+2122,LaLiga,Ath Madrid vs Celta,Strong,H,0.6780358987001363,1.61,1,0.6100000000000001
+2122,LaLiga,Vallecano vs Real Madrid,Strong,A,0.6956853864202397,1.66,1,0.6599999999999999
+2122,LaLiga,Barcelona vs Ath Bilbao,Strong,H,0.6761655030683336,1.6,1,0.6000000000000001
+2122,LaLiga,Villarreal vs Espanol,Strong,H,0.7143465219601264,1.5,1,0.5
+2122,LaLiga,Alaves vs Sevilla,Strong,A,0.6051210933505888,1.95,0,-1.0
+2122,LaLiga,Valencia vs Granada,Strong,H,0.6211963868676152,1.75,1,0.75
+2122,LaLiga,Real Madrid vs Sociedad,Strong,H,0.713244733660886,1.6,1,0.6000000000000001
+2122,LaLiga,Celta vs Mallorca,Strong,H,0.6260678872905593,1.75,1,0.75
+2122,LaLiga,Sociedad vs Alaves,Strong,H,0.6657930250269359,1.53,1,0.53
+2122,LaLiga,Vallecano vs Sevilla,Strong,A,0.6757759691866381,2.3,0,-1.0
+2122,LaLiga,Mallorca vs Real Madrid,Strong,A,0.6588629665097964,1.57,1,0.5700000000000001
+2122,LaLiga,Vallecano vs Ath Madrid,Strong,A,0.688663179031288,2.0,1,1.0
+2122,LaLiga,Cadiz vs Villarreal,Strong,A,0.605508158956102,1.83,0,-1.0
+2122,LaLiga,Ath Madrid vs Alaves,Strong,H,0.8096925090020248,1.33,1,0.33000000000000007
+2122,LaLiga,Sevilla vs Granada,Strong,H,0.6711714135653224,1.5,1,0.5
+2122,LaLiga,Mallorca vs Ath Madrid,Strong,A,0.6487865054423141,1.95,0,-1.0
+2122,LaLiga,Real Madrid vs Getafe,Strong,H,0.7691375078529691,1.4,1,0.3999999999999999
+2122,LaLiga,Ath Madrid vs Espanol,Strong,H,0.7581539311691079,1.4,1,0.3999999999999999
+2122,LaLiga,Barcelona vs Cadiz,Strong,H,0.8417179490687864,1.2,0,-1.0
+2122,LaLiga,Ath Madrid vs Granada,Strong,H,0.7939090873461861,1.3,0,-1.0
+2122,LaLiga,Barcelona vs Vallecano,Strong,H,0.8383362725650592,1.3,0,-1.0
+2122,LaLiga,Sevilla vs Cadiz,Strong,H,0.7231604832596441,1.65,0,-1.0
+2122,LaLiga,Real Madrid vs Espanol,Strong,H,0.8308918047052738,1.5,1,0.5
+2122,LaLiga,Barcelona vs Mallorca,Strong,H,0.8375594192266881,1.3,1,0.30000000000000004
+2122,LaLiga,Celta vs Alaves,Strong,H,0.6355207479679026,1.9,1,0.8999999999999999
+2122,LaLiga,Barcelona vs Celta,Strong,H,0.7578887293757723,1.44,1,0.43999999999999995
+2122,LaLiga,Elche vs Ath Madrid,Strong,A,0.6510826303014787,1.65,1,0.6499999999999999
+2122,LaLiga,Sevilla vs Mallorca,Strong,H,0.7256481588551107,1.61,0,-1.0
+2122,LaLiga,Real Madrid vs Levante,Strong,H,0.7811245448488058,1.45,1,0.44999999999999996
+2122,LaLiga,Sociedad vs Cadiz,Strong,H,0.6802613912691466,1.66,1,0.6599999999999999
+2122,LaLiga,Getafe vs Barcelona,Strong,A,0.6081135534696462,2.1,0,-1.0
+2122,LaLiga,Real Madrid vs Betis,Strong,H,0.6240611129252297,1.65,0,-1.0
+2122,LaLiga,Osasuna vs Mallorca,Strong,H,0.6015483921817422,3.3,0,-1.0
+2122,LaLiga,Barcelona vs Villarreal,Strong,H,0.6727597146903408,2.1,0,-1.0
+2223,LaLiga,Sevilla vs Valladolid,Strong,H,0.755202707428176,1.5,0,-1.0
+2223,LaLiga,Celta vs Real Madrid,Strong,A,0.6087434694779622,1.66,1,0.6599999999999999
+2223,LaLiga,Betis vs Osasuna,Strong,H,0.6482269155830459,1.8,1,0.8
+2223,LaLiga,Espanol vs Real Madrid,Strong,A,0.7189945505477561,1.45,1,0.44999999999999996
+2223,LaLiga,Real Madrid vs Mallorca,Strong,H,0.8221782146019712,1.25,1,0.25
+2223,LaLiga,Betis vs Girona,Strong,H,0.6824109724323756,1.75,1,0.75
+2223,LaLiga,Getafe vs Real Madrid,Strong,A,0.6667009458937414,1.5,1,0.5
+2223,LaLiga,Ath Madrid vs Girona,Strong,H,0.7866351662988176,1.45,1,0.44999999999999996
+2223,LaLiga,Villarreal vs Osasuna,Strong,H,0.6582015361078887,1.57,1,0.5700000000000001
+2223,LaLiga,Ath Madrid vs Vallecano,Strong,H,0.7192130378508732,1.55,0,-1.0
+2223,LaLiga,Sevilla vs Vallecano,Strong,H,0.6819801025056818,2.0,0,-1.0
+2223,LaLiga,Real Madrid vs Girona,Strong,H,0.8385664806277356,1.2,0,-1.0
+2223,LaLiga,Ath Madrid vs Espanol,Strong,H,0.7284313143633406,1.44,0,-1.0
+2223,LaLiga,Villarreal vs Mallorca,Strong,H,0.6731192333429946,1.57,0,-1.0
+2223,LaLiga,Vallecano vs Real Madrid,Strong,A,0.7277657120693599,1.65,0,-1.0
+2223,LaLiga,Valladolid vs Real Madrid,Strong,A,0.7135742832875898,1.45,1,0.44999999999999996
+2223,LaLiga,Barcelona vs Espanol,Strong,H,0.8024408782384151,1.25,0,-1.0
+2223,LaLiga,Ath Madrid vs Valladolid,Strong,H,0.7703638906592764,1.4,1,0.3999999999999999
+2223,LaLiga,Villarreal vs Girona,Strong,H,0.6507300623461546,1.73,1,0.73
+2223,LaLiga,Girona vs Barcelona,Strong,A,0.6976336967753887,1.57,1,0.5700000000000001
+2223,LaLiga,Sevilla vs Elche,Strong,H,0.6840213257580762,1.53,1,0.53
+2223,LaLiga,Real Madrid vs Sociedad,Strong,H,0.6313408167748931,1.67,0,-1.0
+2223,LaLiga,Villarreal vs Vallecano,Strong,H,0.6622145335752095,1.67,0,-1.0
+2223,LaLiga,Real Madrid vs Valencia,Strong,H,0.7438083705193613,1.44,1,0.43999999999999995
+2223,LaLiga,Mallorca vs Real Madrid,Strong,A,0.7338382598447291,1.73,0,-1.0
+2223,LaLiga,Sociedad vs Valladolid,Strong,H,0.70639143013527,1.44,0,-1.0
+2223,LaLiga,Sevilla vs Mallorca,Strong,H,0.6361950584745628,1.91,1,0.9099999999999999
+2223,LaLiga,Betis vs Valladolid,Strong,H,0.7041454976858239,1.6,1,0.6000000000000001
+2223,LaLiga,Osasuna vs Real Madrid,Strong,A,0.615545288432584,1.8,1,0.8
+2223,LaLiga,Real Madrid vs Ath Madrid,Strong,H,0.6329966663695605,1.8,0,-1.0
+2223,LaLiga,Barcelona vs Valencia,Strong,H,0.7385250728504854,1.53,1,0.53
+2223,LaLiga,Real Madrid vs Espanol,Strong,H,0.812541964532695,1.25,1,0.25
+2223,LaLiga,Ath Madrid vs Valencia,Strong,H,0.6869495757931474,1.55,1,0.55
+2223,LaLiga,Betis vs Mallorca,Strong,H,0.7162367208255342,1.8,1,0.8
+2223,LaLiga,Real Madrid vs Villarreal,Strong,H,0.6778520788946054,1.53,0,-1.0
+2223,LaLiga,Betis vs Espanol,Strong,H,0.6851030169660789,1.83,1,0.8300000000000001
+2223,LaLiga,Villarreal vs Valladolid,Strong,H,0.7964604362489737,1.44,0,-1.0
+2223,LaLiga,Real Madrid vs Celta,Strong,H,0.7819107361332579,1.36,1,0.3600000000000001
+2223,LaLiga,Girona vs Real Madrid,Strong,A,0.6403735128883321,1.57,0,-1.0
+2223,LaLiga,Ath Madrid vs Mallorca,Strong,H,0.7679366193571703,1.4,1,0.3999999999999999
+2223,LaLiga,Villarreal vs Espanol,Strong,H,0.6539430950321885,1.57,1,0.5700000000000001
+2223,LaLiga,Valladolid vs Ath Madrid,Strong,A,0.6221505417864054,1.65,1,0.6499999999999999
+2223,LaLiga,Sevilla vs Espanol,Strong,H,0.6807920145899334,1.83,1,0.8300000000000001
+2223,LaLiga,Real Madrid vs Getafe,Strong,H,0.7251024217916808,1.55,1,0.55
+2223,LaLiga,Espanol vs Barcelona,Strong,A,0.6255979504728475,1.65,1,0.6499999999999999
+2223,LaLiga,Betis vs Vallecano,Strong,H,0.666534788068684,1.91,1,0.9099999999999999
+2223,LaLiga,Barcelona vs Sociedad,Strong,H,0.613686751104234,1.8,0,-1.0
+2223,LaLiga,Ath Madrid vs Osasuna,Strong,H,0.7405329462992152,1.36,1,0.3600000000000001
+2223,LaLiga,Real Madrid vs Vallecano,Strong,H,0.8141960724440729,1.62,1,0.6200000000000001
+2223,LaLiga,Espanol vs Ath Madrid,Strong,A,0.6169946455135765,2.38,0,-1.0
+2223,LaLiga,Betis vs Getafe,Strong,H,0.6429792851511807,2.0,0,-1.0
+2223,LaLiga,Barcelona vs Mallorca,Strong,H,0.7737973976400078,1.33,1,0.33000000000000007
+2223,LaLiga,Real Madrid vs Ath Bilbao,Strong,H,0.7232584481173725,1.91,0,-1.0
+2223,LaLiga,Betis vs Valencia,Strong,H,0.6658377132380059,2.63,0,-1.0
+2324,LaLiga,Sociedad vs Celta,Strong,H,0.6294890161672734,1.73,0,-1.0
+2324,LaLiga,Betis vs Vallecano,Strong,H,0.6157244936308014,1.95,1,0.95
+2324,LaLiga,Villarreal vs Las Palmas,Strong,H,0.6487307586730274,1.6,0,-1.0
+2324,LaLiga,Celta vs Ath Madrid,Strong,A,0.6093487033961104,2.1,1,1.1
+2324,LaLiga,Villarreal vs Alaves,Strong,H,0.6393219947228468,1.7,0,-1.0
+2324,LaLiga,Girona vs Celta,Strong,H,0.6381280332850993,1.7,1,0.7
+2324,LaLiga,Ath Madrid vs Alaves,Strong,H,0.7912122569972351,1.4,1,0.3999999999999999
+2324,LaLiga,Valencia vs Granada,Strong,H,0.612247759722509,1.65,1,0.6499999999999999
+2324,LaLiga,Real Madrid vs Valencia,Strong,H,0.752108281192311,1.33,1,0.33000000000000007
+2324,LaLiga,Vallecano vs Barcelona,Strong,A,0.6067276942100887,1.65,0,-1.0
+2324,LaLiga,Girona vs Alaves,Strong,H,0.7133784961535878,1.53,1,0.53
+2324,LaLiga,Ath Madrid vs Getafe,Strong,H,0.7024979993840459,1.45,0,-1.0
+2324,LaLiga,Villarreal vs Celta,Strong,H,0.602082380546184,2.4,1,1.4
+2324,LaLiga,Ath Madrid vs Sevilla,Strong,H,0.7444880531175049,1.53,1,0.53
+2324,LaLiga,Sociedad vs Alaves,Strong,H,0.7248526823184469,1.6,0,-1.0
+2324,LaLiga,Betis vs Granada,Strong,H,0.6632814711165895,1.62,1,0.6200000000000001
+2324,LaLiga,Girona vs Sevilla,Strong,H,0.6626320898937936,1.73,1,0.73
+2324,LaLiga,Granada vs Ath Madrid,Strong,A,0.6656735475203677,1.7,1,0.7
+2324,LaLiga,Sociedad vs Vallecano,Strong,H,0.7084951126061435,1.67,0,-1.0
+2324,LaLiga,Ath Madrid vs Valencia,Strong,H,0.6934510414422576,1.45,1,0.44999999999999996
+2324,LaLiga,Ath Madrid vs Vallecano,Strong,H,0.7812007207505344,1.5,1,0.5
+2324,LaLiga,Valencia vs Almeria,Strong,H,0.6586172511272783,1.65,1,0.6499999999999999
+2324,LaLiga,Alaves vs Barcelona,Strong,A,0.6193324185626613,1.85,1,0.8500000000000001
+2324,LaLiga,Villarreal vs Cadiz,Strong,H,0.6905261037433662,1.62,0,-1.0
+2324,LaLiga,Sociedad vs Osasuna,Strong,H,0.6702553990711455,1.85,0,-1.0
+2324,LaLiga,Barcelona vs Granada,Strong,H,0.8310579133498528,1.22,0,-1.0
+2324,LaLiga,Ath Madrid vs Las Palmas,Strong,H,0.6984054813181179,1.5,1,0.5
+2324,LaLiga,Betis vs Alaves,Strong,H,0.6408705661862192,2.1,0,-1.0
+2324,LaLiga,Barcelona vs Getafe,Strong,H,0.7233680024585134,1.4,1,0.3999999999999999
+2324,LaLiga,Girona vs Vallecano,Strong,H,0.7302916646196584,1.65,1,0.6499999999999999
+2324,LaLiga,Valencia vs Real Madrid,Strong,A,0.603789188948943,1.67,0,-1.0
+2324,LaLiga,Ath Madrid vs Betis,Strong,H,0.6450022054694838,1.57,1,0.5700000000000001
+2324,LaLiga,Villarreal vs Granada,Strong,H,0.7026153573450704,1.65,1,0.6499999999999999
+2324,LaLiga,Barcelona vs Mallorca,Strong,H,0.7471312058552568,1.44,1,0.43999999999999995
+2324,LaLiga,Girona vs Osasuna,Strong,H,0.6608946810663364,1.62,1,0.6200000000000001
+2324,LaLiga,Sociedad vs Cadiz,Strong,H,0.6704958646697616,1.5,1,0.5
+2324,LaLiga,Mallorca vs Granada,Strong,H,0.6136638125942465,1.83,1,0.8300000000000001
+2324,LaLiga,Ath Bilbao vs Alaves,Strong,H,0.717213928937214,1.55,1,0.55
+2324,LaLiga,Las Palmas vs Almeria,Strong,H,0.6722284349930976,1.95,0,-1.0
+2324,LaLiga,Mallorca vs Real Madrid,Strong,A,0.6179988308095995,1.75,1,0.75
+2324,LaLiga,Cadiz vs Barcelona,Strong,A,0.6224101376094192,1.83,1,0.8300000000000001
+2324,LaLiga,Girona vs Cadiz,Strong,H,0.7173993431636801,1.4,1,0.3999999999999999
+2324,LaLiga,Alaves vs Ath Madrid,Strong,A,0.6618801677670373,1.95,0,-1.0
+2324,LaLiga,Ath Madrid vs Ath Bilbao,Strong,H,0.6208875199227288,1.95,1,0.95
+2324,LaLiga,Villarreal vs Vallecano,Strong,H,0.684488933287279,1.65,1,0.6499999999999999
+2324,LaLiga,Real Madrid vs Cadiz,Strong,H,0.775909400346382,1.33,1,0.33000000000000007
+2324,LaLiga,Valencia vs Alaves,Strong,H,0.6032084093219686,2.1,0,-1.0
+2324,LaLiga,Sevilla vs Granada,Strong,H,0.6299425732560031,1.65,1,0.6499999999999999
+2324,LaLiga,Villarreal vs Sevilla,Strong,H,0.6177343810413908,1.83,1,0.8300000000000001
+2324,LaLiga,Ath Madrid vs Celta,Strong,H,0.7372024384482402,1.42,1,0.41999999999999993
+2324,LaLiga,Sevilla vs Cadiz,Strong,H,0.6138684009952181,1.9,0,-1.0
+2324,LaLiga,Ath Madrid vs Osasuna,Strong,H,0.7641536839175017,1.4,0,-1.0
+2122,Bundesliga,M'gladbach vs Bayern Munich,Strong,A,0.6099282495799649,1.66,0,-1.0
+2122,Bundesliga,Ein Frankfurt vs Augsburg,Strong,H,0.7081336418686018,1.57,0,-1.0
+2122,Bundesliga,Ein Frankfurt vs Hertha,Strong,H,0.6435670379260909,1.75,0,-1.0
+2122,Bundesliga,Dortmund vs FC Koln,Strong,H,0.7190323846159611,1.45,1,0.44999999999999996
+2122,Bundesliga,Wolfsburg vs FC Koln,Strong,H,0.6159638667748286,2.1,0,-1.0
+2122,Bundesliga,Hertha vs Dortmund,Strong,A,0.637225483339586,1.57,0,-1.0
+2122,Bundesliga,Bayern Munich vs M'gladbach,Strong,H,0.8054538535807039,1.33,0,-1.0
+2122,Bundesliga,Hoffenheim vs Augsburg,Strong,H,0.6600370868132431,1.53,1,0.53
+2122,Bundesliga,Ein Frankfurt vs Bielefeld,Strong,H,0.6366749285352512,1.75,0,-1.0
+2122,Bundesliga,Dortmund vs M'gladbach,Strong,H,0.6652567252410754,1.6,1,0.6000000000000001
+2122,Bundesliga,Augsburg vs Dortmund,Strong,A,0.6704859708732572,1.61,0,-1.0
+2122,Bundesliga,Bayern Munich vs Stuttgart,Strong,H,0.8392551415824504,1.25,0,-1.0
+2122,Bundesliga,Dortmund vs Hertha,Strong,H,0.7082879647241002,1.5,1,0.5
+2223,Bundesliga,Union Berlin vs Hertha,Strong,H,0.7015646341478022,1.72,1,0.72
+2223,Bundesliga,FC Koln vs Schalke 04,Strong,H,0.6292059762272494,1.7,1,0.7
+2223,Bundesliga,Schalke 04 vs M'gladbach,Strong,A,0.6219684835043569,2.15,0,-1.0
+2223,Bundesliga,Dortmund vs Werder Bremen,Strong,H,0.7551598311657198,1.36,0,-1.0
+2223,Bundesliga,Leverkusen vs Hoffenheim,Strong,H,0.6789820290901398,1.66,0,-1.0
+2223,Bundesliga,Wolfsburg vs Schalke 04,Strong,H,0.6496295390289176,1.83,0,-1.0
+2223,Bundesliga,Schalke 04 vs Union Berlin,Strong,A,0.61999100194578,2.3,1,1.2999999999999998
+2223,Bundesliga,Dortmund vs Hoffenheim,Strong,H,0.6406834772425942,1.61,1,0.6100000000000001
+2223,Bundesliga,Dortmund vs Schalke 04,Strong,H,0.7991417746002537,1.36,1,0.3600000000000001
+2223,Bundesliga,Leverkusen vs Schalke 04,Strong,H,0.7113091235507247,1.45,1,0.44999999999999996
+2223,Bundesliga,Dortmund vs Stuttgart,Strong,H,0.6910297197771421,1.53,1,0.53
+2223,Bundesliga,Schalke 04 vs Freiburg,Strong,A,0.6668940470328424,1.9,1,0.8999999999999999
+2223,Bundesliga,M'gladbach vs Stuttgart,Strong,H,0.6169703363694772,2.15,1,1.15
+2223,Bundesliga,Leverkusen vs Stuttgart,Strong,H,0.6532136292527844,1.72,1,0.72
+2223,Bundesliga,Werder Bremen vs RB Leipzig,Strong,A,0.6312593884162419,1.9,1,0.8999999999999999
+2223,Bundesliga,M'gladbach vs Schalke 04,Strong,H,0.7012384069752507,1.53,0,-1.0
+2223,Bundesliga,Schalke 04 vs Wolfsburg,Strong,A,0.6227173079118772,1.95,0,-1.0
+2223,Bundesliga,Freiburg vs Stuttgart,Strong,H,0.6116079280953336,1.8,1,0.8
+2223,Bundesliga,Union Berlin vs Schalke 04,Strong,H,0.8180918339137859,1.6,0,-1.0
+2223,Bundesliga,Dortmund vs Hertha,Strong,H,0.7906345326619704,1.33,1,0.33000000000000007
+2223,Bundesliga,RB Leipzig vs Ein Frankfurt,Strong,H,0.6389257063222197,1.7,1,0.7
+2223,Bundesliga,Mainz vs Hoffenheim,Strong,H,0.6472094360255629,1.91,1,0.9099999999999999
+2223,Bundesliga,Schalke 04 vs Dortmund,Strong,A,0.7775402397469287,1.73,0,-1.0
+2223,Bundesliga,Freiburg vs Hoffenheim,Strong,H,0.7013509734252431,1.91,1,0.9099999999999999
+2223,Bundesliga,Union Berlin vs Stuttgart,Strong,H,0.6526865544486775,2.05,1,1.0499999999999998
+2223,Bundesliga,Schalke 04 vs Leverkusen,Strong,A,0.705807066262083,1.91,1,0.9099999999999999
+2223,Bundesliga,Freiburg vs Hertha,Strong,H,0.6686479751612326,1.62,0,-1.0
+2223,Bundesliga,Hertha vs RB Leipzig,Strong,A,0.6526680268265592,1.62,1,0.6200000000000001
+2223,Bundesliga,Mainz vs Werder Bremen,Strong,H,0.6348725058118455,1.7,0,-1.0
+2223,Bundesliga,Stuttgart vs Dortmund,Strong,A,0.6318274362239814,1.95,0,-1.0
+2223,Bundesliga,Union Berlin vs Bochum,Strong,H,0.6589475400803017,1.6,0,-1.0
+2223,Bundesliga,Dortmund vs Ein Frankfurt,Strong,H,0.6323704247690957,1.62,1,0.6200000000000001
+2223,Bundesliga,Freiburg vs Schalke 04,Strong,H,0.7526751210495067,1.8,1,0.8
+2223,Bundesliga,RB Leipzig vs Hoffenheim,Strong,H,0.7274345856509604,1.44,1,0.43999999999999995
+2223,Bundesliga,Leverkusen vs FC Koln,Strong,H,0.6091397770708352,1.67,0,-1.0
+2223,Bundesliga,Mainz vs Schalke 04,Strong,H,0.6766170422157913,1.62,0,-1.0
+2223,Bundesliga,FC Koln vs Hertha,Strong,H,0.6427187527084989,1.85,1,0.8500000000000001
+2223,Bundesliga,Wolfsburg vs Hoffenheim,Strong,H,0.6130777397214564,1.91,1,0.9099999999999999
+2223,Bundesliga,RB Leipzig vs Schalke 04,Strong,H,0.8542339934332489,1.6,1,0.6000000000000001
+2324,Bundesliga,Freiburg vs Werder Bremen,Strong,H,0.6303462121567993,1.7,1,0.7
+2324,Bundesliga,Dortmund vs Wolfsburg,Strong,H,0.6625296742902391,1.65,1,0.6499999999999999
+2324,Bundesliga,Dortmund vs Union Berlin,Strong,H,0.6565004447383967,1.57,1,0.5700000000000001
+2324,Bundesliga,Dortmund vs Werder Bremen,Strong,H,0.8129631712559611,1.29,1,0.29000000000000004
+2324,Bundesliga,Dortmund vs M'gladbach,Strong,H,0.7700238645701507,1.45,1,0.44999999999999996
+2324,Bundesliga,Dortmund vs Mainz,Strong,H,0.7404807836748356,1.55,0,-1.0
+2324,Bundesliga,FC Koln vs Dortmund,Strong,A,0.6039038644114223,1.73,1,0.73
+2324,Bundesliga,Dortmund vs Bochum,Strong,H,0.7750614814660071,1.36,1,0.3600000000000001
+2324,Bundesliga,Dortmund vs Hoffenheim,Strong,H,0.7785248376921495,1.5,0,-1.0
+2324,Bundesliga,Dortmund vs Ein Frankfurt,Strong,H,0.620103697426972,1.62,1,0.6200000000000001
+2324,Bundesliga,Dortmund vs Stuttgart,Strong,H,0.6073970809869828,2.25,0,-1.0
+2324,Bundesliga,Dortmund vs Augsburg,Strong,H,0.7992437426977991,1.85,1,0.8500000000000001
+2122,SerieA,Torino vs Atalanta,Strong,A,0.6475406668618177,1.55,1,0.55
+2122,SerieA,Verona vs Inter,Strong,A,0.6578321363417212,1.55,1,0.55
+2122,SerieA,Atalanta vs Fiorentina,Strong,H,0.6640492085395633,1.55,0,-1.0
+2122,SerieA,Sampdoria vs Inter,Strong,A,0.6246510062491353,1.61,0,-1.0
+2122,SerieA,Sassuolo vs Torino,Strong,H,0.6302497767552578,1.72,0,-1.0
+2122,SerieA,Inter vs Bologna,Strong,H,0.8163403197921991,1.36,1,0.3600000000000001
+2122,SerieA,Fiorentina vs Inter,Strong,A,0.686018268124064,1.9,1,0.8999999999999999
+2122,SerieA,Sassuolo vs Inter,Strong,A,0.6282186077775558,1.7,1,0.7
+2122,SerieA,Torino vs Juventus,Strong,A,0.6065090390394695,1.8,1,0.8
+2122,SerieA,Lazio vs Inter,Strong,A,0.6283736904065443,2.15,0,-1.0
+2122,SerieA,Milan vs Verona,Strong,H,0.7567736472133592,1.55,1,0.55
+2122,SerieA,Napoli vs Torino,Strong,H,0.8015808817246406,1.4,1,0.3999999999999999
+2122,SerieA,Atalanta vs Udinese,Strong,H,0.7295888075810356,1.4,0,-1.0
+2122,SerieA,Milan vs Torino,Strong,H,0.7940952338041554,1.6,1,0.6000000000000001
+2122,SerieA,Empoli vs Inter,Strong,A,0.7001584266178691,1.5,1,0.5
+2122,SerieA,Napoli vs Bologna,Strong,H,0.7910268263005381,1.3,1,0.30000000000000004
+2122,SerieA,Atalanta vs Lazio,Strong,H,0.6374869347487598,1.9,0,-1.0
+2122,SerieA,Inter vs Udinese,Strong,H,0.816454421608618,1.36,1,0.3600000000000001
+2122,SerieA,Juventus vs Fiorentina,Strong,H,0.6387009002675751,1.57,1,0.5700000000000001
+2122,SerieA,Atalanta vs Spezia,Strong,H,0.8152596832243064,1.25,1,0.25
+2122,SerieA,Napoli vs Lazio,Strong,H,0.6402211512918005,1.8,1,0.8
+2122,SerieA,Roma vs Torino,Strong,H,0.6060689175121398,1.72,1,0.72
+2122,SerieA,Inter vs Spezia,Strong,H,0.8661929924102862,1.18,1,0.17999999999999994
+2122,SerieA,Genoa vs Milan,Strong,A,0.6286114919620643,1.66,1,0.6599999999999999
+2122,SerieA,Roma vs Inter,Strong,A,0.650221005706324,1.9,1,0.8999999999999999
+2122,SerieA,Udinese vs Milan,Strong,A,0.6495626130643097,1.9,0,-1.0
+2122,SerieA,Verona vs Atalanta,Strong,A,0.6504978318720189,1.9,1,0.8999999999999999
+2122,SerieA,Atalanta vs Roma,Strong,H,0.6143670394017338,1.7,0,-1.0
+2122,SerieA,Inter vs Torino,Strong,H,0.8284888553395534,1.3,1,0.30000000000000004
+2122,SerieA,Napoli vs Spezia,Strong,H,0.8277852774657056,1.22,0,-1.0
+2122,SerieA,Udinese vs Atalanta,Strong,A,0.698428674351405,2.05,1,1.0499999999999998
+2122,SerieA,Inter vs Lazio,Strong,H,0.7348244614495751,1.4,1,0.3999999999999999
+2122,SerieA,Bologna vs Napoli,Strong,A,0.6631493722446059,1.95,1,0.95
+2122,SerieA,Juventus vs Torino,Strong,H,0.7122655041031118,1.57,0,-1.0
+2122,SerieA,Milan vs Udinese,Strong,H,0.7635508831800866,1.5,0,-1.0
+2122,SerieA,Empoli vs Juventus,Strong,A,0.6565509586535303,1.65,1,0.6499999999999999
+2122,SerieA,Milan vs Empoli,Strong,H,0.7364006739025769,1.36,1,0.3600000000000001
+2122,SerieA,Torino vs Inter,Strong,A,0.713148136103642,1.66,0,-1.0
+2122,SerieA,Inter vs Fiorentina,Strong,H,0.6712118191726072,1.5,0,-1.0
+2122,SerieA,Milan vs Bologna,Strong,H,0.7569126223939996,1.4,0,-1.0
+2122,SerieA,Torino vs Milan,Strong,A,0.6729333915205227,1.9,0,-1.0
+2122,SerieA,Napoli vs Fiorentina,Strong,H,0.654889010154675,1.75,0,-1.0
+2122,SerieA,Milan vs Genoa,Strong,H,0.7898449377963319,1.33,1,0.33000000000000007
+2122,SerieA,Juventus vs Bologna,Strong,H,0.7722102481598566,1.33,0,-1.0
+2122,SerieA,Empoli vs Napoli,Strong,A,0.6740248179910051,1.6,0,-1.0
+2122,SerieA,Atalanta vs Torino,Strong,H,0.6682070246090911,1.6,0,-1.0
+2122,SerieA,Milan vs Fiorentina,Strong,H,0.6846119712628385,1.61,1,0.6100000000000001
+2122,SerieA,Udinese vs Inter,Strong,A,0.6987279103279711,1.55,1,0.55
+2122,SerieA,Genoa vs Juventus,Strong,A,0.6328577855218385,2.05,0,-1.0
+2122,SerieA,Torino vs Napoli,Strong,A,0.6093757752813266,2.05,1,1.0499999999999998
+2122,SerieA,Napoli vs Genoa,Strong,H,0.7758543719213619,1.8,1,0.8
+2122,SerieA,Spezia vs Napoli,Strong,A,0.6866088997591476,1.53,1,0.53
+2223,SerieA,Udinese vs Salernitana,Strong,H,0.6227539794637705,1.75,0,-1.0
+2223,SerieA,Sampdoria vs Lazio,Strong,A,0.6364682723476902,1.85,0,-1.0
+2223,SerieA,Napoli vs Lecce,Strong,H,0.8536048804739539,1.25,0,-1.0
+2223,SerieA,Empoli vs Milan,Strong,A,0.6313638896405281,1.6,1,0.6000000000000001
+2223,SerieA,Napoli vs Torino,Strong,H,0.7066671222446834,1.6,1,0.6000000000000001
+2223,SerieA,Lazio vs Spezia,Strong,H,0.7166223571778245,1.4,1,0.3999999999999999
+2223,SerieA,Verona vs Milan,Strong,A,0.6424451481998739,1.57,1,0.5700000000000001
+2223,SerieA,Fiorentina vs Inter,Strong,A,0.6045468603239428,2.05,1,1.0499999999999998
+2223,SerieA,Lecce vs Juventus,Strong,A,0.6774558016906745,1.9,1,0.8999999999999999
+2223,SerieA,Lazio vs Salernitana,Strong,H,0.7271146346382502,1.5,0,-1.0
+2223,SerieA,Udinese vs Lecce,Strong,H,0.6549839403475671,1.61,0,-1.0
+2223,SerieA,Milan vs Spezia,Strong,H,0.8344967494336657,1.22,1,0.21999999999999997
+2223,SerieA,Napoli vs Empoli,Strong,H,0.8012839375873747,1.25,1,0.25
+2223,SerieA,Spezia vs Udinese,Strong,A,0.6159550670147901,1.9,0,-1.0
+2223,SerieA,Lecce vs Atalanta,Strong,A,0.6618472318278804,1.8,0,-1.0
+2223,SerieA,Milan vs Fiorentina,Strong,H,0.6319684952774914,1.7,1,0.7
+2223,SerieA,Salernitana vs Milan,Strong,A,0.7044089151952607,1.45,1,0.44999999999999996
+2223,SerieA,Lecce vs Lazio,Strong,A,0.6914780478465606,2.05,0,-1.0
+2223,SerieA,Lecce vs Milan,Strong,A,0.7554043625049239,1.62,0,-1.0
+2223,SerieA,Milan vs Sassuolo,Strong,H,0.7018795572902594,1.5,0,-1.0
+2223,SerieA,Verona vs Salernitana,Strong,H,0.6112194103117194,1.85,1,0.8500000000000001
+2223,SerieA,Sassuolo vs Napoli,Strong,A,0.6374953207431763,1.6,1,0.6000000000000001
+2223,SerieA,Spezia vs Juventus,Strong,A,0.6230998599243381,1.62,1,0.6200000000000001
+2223,SerieA,Salernitana vs Lazio,Strong,A,0.6440144525267094,1.7,1,0.7
+2223,SerieA,Bologna vs Inter,Strong,A,0.6168487475038026,1.7,0,-1.0
+2223,SerieA,Lazio vs Sampdoria,Strong,H,0.7134792158304019,1.44,1,0.43999999999999995
+2223,SerieA,Napoli vs Lazio,Strong,H,0.6088148220939588,1.65,0,-1.0
+2223,SerieA,Inter vs Lecce,Strong,H,0.7871427898735901,1.36,1,0.3600000000000001
+2223,SerieA,Napoli vs Atalanta,Strong,H,0.6274379177233312,1.67,1,0.6699999999999999
+2223,SerieA,Torino vs Napoli,Strong,A,0.6328199942175172,1.75,1,0.75
+2223,SerieA,Fiorentina vs Lecce,Strong,H,0.6305729898414679,1.6,1,0.6000000000000001
+2223,SerieA,Inter vs Fiorentina,Strong,H,0.6273414928374443,1.75,0,-1.0
+2223,SerieA,Milan vs Empoli,Strong,H,0.7457184579287726,1.36,0,-1.0
+2223,SerieA,Lecce vs Napoli,Strong,A,0.725384877807288,1.65,1,0.6499999999999999
+2223,SerieA,Spezia vs Lazio,Strong,A,0.6474611862599454,1.7,1,0.7
+2223,SerieA,Napoli vs Verona,Strong,H,0.7610806476486821,1.53,0,-1.0
+2223,SerieA,Milan vs Lecce,Strong,H,0.7527816796383564,1.5,1,0.5
+2223,SerieA,Juventus vs Lecce,Strong,H,0.7275764029891832,1.6,1,0.6000000000000001
+2223,SerieA,Udinese vs Napoli,Strong,A,0.6206998008847132,1.75,0,-1.0
+2223,SerieA,Napoli vs Fiorentina,Strong,H,0.6693349393575805,1.8,1,0.8
+2223,SerieA,Lazio vs Lecce,Strong,H,0.79300145261911,1.7,0,-1.0
+2223,SerieA,Spezia vs Milan,Strong,A,0.6871566829681767,1.91,0,-1.0
+2223,SerieA,Empoli vs Juventus,Strong,A,0.624647075605317,1.65,0,-1.0
+2223,SerieA,Bologna vs Napoli,Strong,A,0.6576565869018682,2.2,0,-1.0
+2223,SerieA,Milan vs Verona,Strong,H,0.6786990758354664,1.73,1,0.73
+2324,SerieA,Lazio vs Genoa,Strong,H,0.6925520582499909,1.55,0,-1.0
+2324,SerieA,Cagliari vs Inter,Strong,A,0.7034196689237329,1.44,1,0.43999999999999995
+2324,SerieA,Bologna vs Cagliari,Strong,H,0.6755799427397939,1.7,1,0.7
+2324,SerieA,Genoa vs Napoli,Strong,A,0.6928686197244437,1.67,0,-1.0
+2324,SerieA,Cagliari vs Milan,Strong,A,0.6801755353639188,1.67,1,0.6699999999999999
+2324,SerieA,Fiorentina vs Cagliari,Strong,H,0.7176366791132626,1.5,1,0.5
+2324,SerieA,Genoa vs Milan,Strong,A,0.6024777766279187,1.91,1,0.9099999999999999
+2324,SerieA,Verona vs Napoli,Strong,A,0.6486407052986896,1.65,1,0.6499999999999999
+2324,SerieA,Atalanta vs Genoa,Strong,H,0.6553443009262504,1.55,1,0.55
+2324,SerieA,Juventus vs Cagliari,Strong,H,0.7516062712364676,1.36,1,0.3600000000000001
+2324,SerieA,Lazio vs Cagliari,Strong,H,0.6660846197889363,1.62,1,0.6200000000000001
+2324,SerieA,Verona vs Lazio,Strong,A,0.6092322780374926,1.95,0,-1.0
+2324,SerieA,Genoa vs Juventus,Strong,A,0.6365296125040144,1.91,0,-1.0
+2324,SerieA,Napoli vs Cagliari,Strong,H,0.7538560868854413,1.33,1,0.33000000000000007
+2324,SerieA,Genoa vs Inter,Strong,A,0.6913401844343642,1.65,0,-1.0
+2324,SerieA,Lazio vs Frosinone,Strong,H,0.6275972780756114,1.67,1,0.6699999999999999
+2324,SerieA,Napoli vs Monza,Strong,H,0.6347485585215711,1.62,0,-1.0
+2324,SerieA,Bologna vs Genoa,Strong,H,0.6215564828445025,2.05,0,-1.0
+2324,SerieA,Empoli vs Milan,Strong,A,0.6030211100955623,1.67,1,0.6699999999999999
+2324,SerieA,Lazio vs Lecce,Strong,H,0.6317057210341598,1.65,1,0.6499999999999999
+2324,SerieA,Cagliari vs Bologna,Strong,A,0.6063245659101418,2.5,0,-1.0
+2324,SerieA,Juventus vs Sassuolo,Strong,H,0.7144936749314386,1.4,1,0.3999999999999999
+2324,SerieA,Frosinone vs Milan,Strong,A,0.6217860009484297,1.62,1,0.6200000000000001
+2324,SerieA,Napoli vs Verona,Strong,H,0.7511004041728624,1.4,1,0.3999999999999999
+2324,SerieA,Roma vs Cagliari,Strong,H,0.700384315439763,1.44,1,0.43999999999999995
+2324,SerieA,Cagliari vs Lazio,Strong,A,0.6067737345871416,2.15,1,1.15
+2324,SerieA,Napoli vs Genoa,Strong,H,0.6970736139763867,1.6,0,-1.0
+2324,SerieA,Verona vs Juventus,Strong,A,0.6042083470492201,1.67,0,-1.0
+2324,SerieA,Bologna vs Verona,Strong,H,0.6600504216176466,1.55,1,0.55
+2324,SerieA,Cagliari vs Napoli,Strong,A,0.666023125157986,1.83,0,-1.0
+2324,SerieA,Sassuolo vs Napoli,Strong,A,0.6103572686795314,1.8,1,0.8
+2324,SerieA,Inter vs Genoa,Strong,H,0.8468746761623733,1.3,1,0.30000000000000004
+2324,SerieA,Monza vs Cagliari,Strong,H,0.6349170788279273,2.05,1,1.0499999999999998
+2324,SerieA,Juventus vs Genoa,Strong,H,0.6679504180310386,1.5,0,-1.0
+2324,SerieA,Verona vs Milan,Strong,A,0.6194567719683831,1.7,1,0.7
+2324,SerieA,Milan vs Lecce,Strong,H,0.7489875693004914,1.36,1,0.3600000000000001
+2324,SerieA,Cagliari vs Atalanta,Strong,A,0.6800626242926894,1.73,0,-1.0
+2324,SerieA,Inter vs Cagliari,Strong,H,0.8493194278849664,1.18,0,-1.0
+2324,SerieA,Cagliari vs Juventus,Strong,A,0.6254174687022084,1.75,0,-1.0
+2324,SerieA,Inter vs Torino,Strong,H,0.6857138058505824,1.53,1,0.53
+2324,SerieA,Fiorentina vs Sassuolo,Strong,H,0.6514193802375939,1.7,1,0.7
+2324,SerieA,Bologna vs Udinese,Strong,H,0.6430977194051068,1.6,0,-1.0
+2324,SerieA,Sassuolo vs Inter,Strong,A,0.7261854267789595,1.5,0,-1.0
+2324,SerieA,Frosinone vs Inter,Strong,A,0.689917569927924,1.73,1,0.73
+2324,SerieA,Milan vs Cagliari,Strong,H,0.7480974107792309,1.4,1,0.3999999999999999
+2324,SerieA,Verona vs Inter,Strong,A,0.7172077658124352,1.53,0,-1.0
+2122,Ligue1,Lorient vs Monaco,Strong,A,0.6485246467686798,1.85,0,-1.0
+2122,Ligue1,Lille vs Nice,Strong,H,0.6081175718285411,1.8,0,-1.0
+2122,Ligue1,Angers vs Lyon,Strong,A,0.6388457129035525,1.75,0,-1.0
+2122,Ligue1,St Etienne vs Lille,Strong,A,0.623381245800882,2.4,0,-1.0
+2122,Ligue1,Lille vs Montpellier,Strong,H,0.6247989840603165,1.66,1,0.6599999999999999
+2122,Ligue1,Troyes vs Monaco,Strong,A,0.6852387630959296,1.83,1,0.8300000000000001
+2122,Ligue1,Lille vs Brest,Strong,H,0.6461404368541296,1.55,0,-1.0
+2122,Ligue1,Brest vs Monaco,Strong,A,0.6287305388831704,1.75,0,-1.0
+2122,Ligue1,Lille vs Angers,Strong,H,0.7008136537838687,1.72,0,-1.0
+2122,Ligue1,Bordeaux vs Lille,Strong,A,0.6608710824887445,1.75,1,0.75
+2122,Ligue1,Lorient vs Paris SG,Strong,A,0.7636785000999599,1.4,0,-1.0
+2122,Ligue1,Troyes vs Lyon,Strong,A,0.6578025926965921,1.65,1,0.6499999999999999
+2122,Ligue1,Lille vs Lorient,Strong,H,0.7614327469092362,1.53,1,0.53
+2122,Ligue1,Lille vs Metz,Strong,H,0.6918806822972295,1.53,0,-1.0
+2122,Ligue1,Nantes vs Paris SG,Strong,A,0.681068803190678,1.5,0,-1.0
+2122,Ligue1,Bordeaux vs Monaco,Strong,A,0.631625455839419,1.66,0,-1.0
+2122,Ligue1,Nice vs Paris SG,Strong,A,0.6067558261924704,1.85,0,-1.0
+2122,Ligue1,Lille vs St Etienne,Strong,H,0.6132523701693365,1.66,0,-1.0
+2122,Ligue1,Lille vs Bordeaux,Strong,H,0.7546403794892986,1.5,0,-1.0
+2122,Ligue1,Angers vs Lille,Strong,A,0.6560151300240653,2.3,0,-1.0
+2122,Ligue1,Lille vs Lens,Strong,H,0.6035970474291239,2.05,0,-1.0
+2122,Ligue1,Monaco vs Angers,Strong,H,0.744846647433788,1.4,1,0.3999999999999999
+2122,Ligue1,Troyes vs Lille,Strong,A,0.6832657710882656,2.15,0,-1.0
+2223,Ligue1,Toulouse vs Nice,Strong,A,0.6021141847834804,2.5,0,-1.0
+2223,Ligue1,Nantes vs Toulouse,Strong,H,0.6688595114757353,2.37,1,1.37
+2223,Ligue1,Lille vs Toulouse,Strong,H,0.6634884606805297,1.75,1,0.75
+2223,Ligue1,Lyon vs Toulouse,Strong,H,0.7559418841374131,1.45,0,-1.0
+2223,Ligue1,Rennes vs Nantes,Strong,H,0.6803483857880546,1.5,1,0.5
+2223,Ligue1,Angers vs Rennes,Strong,A,0.6707013270613622,1.83,1,0.8300000000000001
+2223,Ligue1,Lens vs Toulouse,Strong,H,0.772272177535135,1.55,1,0.55
+2223,Ligue1,Monaco vs Angers,Strong,H,0.7360092900346049,1.4,1,0.3999999999999999
+2223,Ligue1,Angers vs Lens,Strong,A,0.6097879545110774,1.66,1,0.6599999999999999
+2223,Ligue1,Toulouse vs Monaco,Strong,A,0.666813713024115,2.1,1,1.1
+2223,Ligue1,Rennes vs Toulouse,Strong,H,0.7987899823646137,1.5,1,0.5
+2223,Ligue1,Lens vs Clermont,Strong,H,0.6965988108710246,1.44,1,0.43999999999999995
+2223,Ligue1,Marseille vs Toulouse,Strong,H,0.7674672517580493,1.5,1,0.5
+2223,Ligue1,Lyon vs Clermont,Strong,H,0.6728056928061186,1.5,0,-1.0
+2223,Ligue1,Monaco vs Brest,Strong,H,0.7647394091946732,1.5,1,0.5
+2223,Ligue1,Nice vs Montpellier,Strong,H,0.6166894380401106,1.8,1,0.8
+2223,Ligue1,Clermont vs Rennes,Strong,A,0.6511076276301703,1.91,0,-1.0
+2223,Ligue1,Paris SG vs Toulouse,Strong,H,0.8974560813484259,1.36,1,0.3600000000000001
+2223,Ligue1,Clermont vs Marseille,Strong,A,0.6086504304843559,1.7,1,0.7
+2223,Ligue1,Brest vs Monaco,Strong,A,0.6717620131622278,1.8,1,0.8
+2223,Ligue1,Paris SG vs Lille,Strong,H,0.6257472654177412,1.62,1,0.6200000000000001
+2223,Ligue1,Rennes vs Clermont,Strong,H,0.691943899097166,1.57,1,0.5700000000000001
+2223,Ligue1,Angers vs Lyon,Strong,A,0.6226873307431573,1.67,1,0.6699999999999999
+2223,Ligue1,Reims vs Toulouse,Strong,H,0.6030526960851328,2.1,1,1.1
+2223,Ligue1,Nice vs Auxerre,Strong,H,0.6181096805516452,1.65,0,-1.0
+2223,Ligue1,Brest vs Paris SG,Strong,A,0.6956948609165949,1.44,1,0.43999999999999995
+2223,Ligue1,Marseille vs Montpellier,Strong,H,0.7251122063878835,1.45,0,-1.0
+2223,Ligue1,Lorient vs Marseille,Strong,A,0.6154171748290439,1.65,0,-1.0
+2223,Ligue1,Toulouse vs Lyon,Strong,A,0.6125531878211659,2.0,1,1.0
+2223,Ligue1,Monaco vs Lorient,Strong,H,0.7257144434836705,1.4,1,0.3999999999999999
+2223,Ligue1,Nice vs Clermont,Strong,H,0.602090509903914,1.8,0,-1.0
+2223,Ligue1,Monaco vs Montpellier,Strong,H,0.7433204316419093,1.5,0,-1.0
+2223,Ligue1,Rennes vs Angers,Strong,H,0.7796309293434089,1.29,1,0.29000000000000004
+2223,Ligue1,Lyon vs Montpellier,Strong,H,0.6513422808153518,1.62,1,0.6200000000000001
+2223,Ligue1,Nice vs Toulouse,Strong,H,0.6685113127289724,1.85,0,-1.0
+2223,Ligue1,Monaco vs Toulouse,Strong,H,0.7067605093538145,1.45,0,-1.0
+2324,Ligue1,Lens vs Metz,Strong,H,0.7204443289602832,1.5,0,-1.0
+2324,Ligue1,Lens vs Toulouse,Strong,H,0.6241085754743367,1.73,1,0.73
+2324,Ligue1,Rennes vs Nantes,Strong,H,0.6842923854403812,1.53,1,0.53
+2324,Ligue1,Lens vs Nantes,Strong,H,0.6845911776529012,1.57,1,0.5700000000000001
+2324,Ligue1,Lens vs Reims,Strong,H,0.6508213758000247,1.83,1,0.8300000000000001
+2324,Ligue1,Lens vs Strasbourg,Strong,H,0.6459618486416492,1.62,1,0.6200000000000001
+2324,Ligue1,Montpellier vs Metz,Strong,H,0.6291177493474523,1.75,1,0.75
+2324,Ligue1,Lens vs Monaco,Strong,H,0.6046313461100382,2.38,0,-1.0
+2324,Ligue1,Brest vs Metz,Strong,H,0.6741492412557888,1.53,1,0.53
+2324,Ligue1,Metz vs Lens,Strong,A,0.6621776460879345,1.7,0,-1.0
+2324,Ligue1,Rennes vs Toulouse,Strong,H,0.6014429442050736,1.8,0,-1.0
+2324,Ligue1,Montpellier vs Nantes,Strong,H,0.651776757228054,1.95,0,-1.0
+2324,Ligue1,Brest vs Nantes,Strong,H,0.6418828968926166,1.73,0,-1.0
+2324,Ligue1,Strasbourg vs Metz,Strong,H,0.6042717458335882,2.2,1,1.2000000000000002
+2324,Ligue1,Metz vs Paris SG,Strong,A,0.6214525070974835,1.62,1,0.6200000000000001
