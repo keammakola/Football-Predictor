@@ -15,7 +15,7 @@ ODDS_TRIPLES = [
 ]
 
 
-def download_raw(seasons=None, league_name=None):
+def download_raw(seasons=None, league_name=None, refresh=False):
     """Save each season CSV once. Existing files are left alone (raw stays raw)."""
     seasons = seasons or config.SEASONS
     league_name = league_name or config.DEFAULT_LEAGUE
@@ -26,12 +26,19 @@ def download_raw(seasons=None, league_name=None):
         path = config.RAW_DIR / f"{league_name}_{s}.csv"
         # Always overwrite the current season to get latest results.
         # Skip downloading if it's an old season and the file already exists.
-        if path.exists() and s != "2627":
+        if path.exists() and s != "2627" and not refresh:
             continue
         url = config.URL_TEMPLATE.format(season=s, league=league_code)
         r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
         r.raise_for_status()
-        path.write_bytes(r.content)
+        from io import BytesIO
+        frame = pd.read_csv(BytesIO(r.content), encoding='latin-1')
+        required = {'Date', 'HomeTeam', 'AwayTeam', 'FTR', 'FTHG', 'FTAG'}
+        if not required.issubset(frame.columns):
+            raise ValueError(f'Invalid results response for {league_name}_{s}')
+        temporary = path.with_suffix('.csv.tmp')
+        temporary.write_bytes(r.content)
+        temporary.replace(path)
         print(f"downloaded {path.name}")
 
 

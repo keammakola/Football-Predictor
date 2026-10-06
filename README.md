@@ -79,6 +79,11 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python generate_upcoming.py
 The generator uses separate histories and models for each league. Missing odds
 remain missing, and feed failures are recorded in `upcoming-status.json`.
 
+For deployment, the scheduled GitHub Actions backend refreshes upcoming data
+every six hours and requests a Vercel rebuild. Set `ODDS_API_KEY` and
+`VERCEL_DEPLOY_HOOK` as repository secrets, then run the workflow once.
+See [automated backend setup](docs/deployment.md#automated-backend).
+
 ## Read the evidence
 
 `frontend/public/data/bets.json` contains the selected historical bet ledger.

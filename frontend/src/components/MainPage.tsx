@@ -70,9 +70,14 @@ export const MainPage: React.FC = () => {
     });
   }, []);
 
+  const generatedAt = Date.parse(upcomingStatus?.generated_at_utc || '');
+  const upcomingUnavailable = upcomingError || !Number.isFinite(generatedAt)
+    || generatedAt > windowStart + 5 * 60 * 1000
+    || windowStart - generatedAt > 12 * 60 * 60 * 1000
+    || upcomingStatus?.leagues.some(feed => feed.status === 'error' || feed.odds_status === 'unavailable');
   const eligibleUpcoming = upcoming.filter(match => {
     const kickoff = Date.parse(match.kickoff_utc || '');
-    return match.qualifies && kickoff >= windowStart && kickoff <= windowStart + 24 * 60 * 60 * 1000;
+    return !upcomingUnavailable && match.qualifies && kickoff >= windowStart && kickoff <= windowStart + 24 * 60 * 60 * 1000;
   });
 
   const totalBets = bets.length;
@@ -155,7 +160,7 @@ export const MainPage: React.FC = () => {
             <tbody className="font-mono text-sm">
               {eligibleUpcoming.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="py-8 px-4 text-center text-muted">{upcomingError || upcomingStatus?.leagues.some(feed => feed.status === 'error') ? 'Upcoming predictions are temporarily unavailable.' : 'No matches in the next 24 hours meet our 60% confidence threshold with favourable odds.'}</td>
+                  <td colSpan={6} className="py-8 px-4 text-center text-muted">{upcomingUnavailable ? 'Upcoming predictions are temporarily unavailable while we refresh the data.' : 'No matches in the next 24 hours meet our 60% confidence threshold with favourable odds.'}</td>
                 </tr>
               ) : eligibleUpcoming.map((match, i) => (
                 <tr key={i} className="border-b border-dashed border-line hover:bg-bg/50">
