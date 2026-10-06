@@ -18,7 +18,7 @@ venv/
 frontend/dist/
 frontend-custom/
 frontend-html/
-data/
+/data/
 snapshots/
 logs/
 docs/
