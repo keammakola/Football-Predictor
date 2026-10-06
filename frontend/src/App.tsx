@@ -7,29 +7,32 @@ function App() {
 
   return (
     <div className="min-h-screen p-4 md:p-12 flex flex-col items-center">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-surface focus:p-3 focus:border-2 focus:border-ink">Skip to content</a>
       <header className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-baseline mb-12 border-b-4 border-ink pb-6">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase">The Football Experiment</h1>
           <p className="text-muted text-sm mt-2 max-w-xl leading-relaxed">I built a prediction bot to find out why winning picks still lose money.</p>
         </div>
-        <nav className="flex flex-wrap gap-6 text-sm font-bold mt-6 md:mt-0 uppercase tracking-wide">
+        <nav aria-label="Main navigation" className="flex flex-wrap items-center gap-6 text-sm font-bold mt-6 md:mt-0 uppercase tracking-wide">
           <button
             onClick={() => setActiveTab('main')}
+            aria-pressed={activeTab === 'main'}
             className={`hover:text-accent transition-colors ${activeTab === 'main' ? 'text-ink border-b-2 border-ink' : 'text-muted'}`}
           >
             Overview
           </button>
           <button
             onClick={() => setActiveTab('technical')}
+            aria-pressed={activeTab === 'technical'}
             className={`hover:text-accent transition-colors ${activeTab === 'technical' ? 'text-ink border-b-2 border-ink' : 'text-muted'}`}
           >
             Behind the Model
           </button>
-          <a href="https://github.com/keammakola/Football-Predictor" target="_blank" rel="noreferrer" className="text-muted hover:text-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">GitHub</a>
+          <a href="https://github.com/keammakola/Football-Predictor" target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center text-muted hover:text-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">GitHub</a>
         </nav>
       </header>
 
-      <main className="w-full max-w-7xl">
+      <main id="main-content" tabIndex={-1} className="w-full min-w-0 max-w-7xl">
         {activeTab === 'main' && <MainPage />}
 
         {activeTab === 'technical' && <TechnicalPage />}
@@ -43,7 +46,7 @@ function App() {
         </div>
         <div className="p-6">
           <p className="font-sans text-sm text-ink leading-relaxed mb-4">
-            <strong>This site is for educational and informational purposes only.</strong> It exists to demonstrate why it is mathematically difficult to profit from sports betting, not to encourage you to gamble. No content here constitutes financial or betting advice.
+            <strong>This site is for educational and informational purposes only.</strong> It examines a historical football backtest where winning picks still produced a loss. These results describe this model, selection rule and dataset; they do not establish that every betting strategy will lose. No content here constitutes financial or betting advice.
           </p>
           <p className="font-sans text-sm text-ink leading-relaxed mb-6">
             Gambling can be addictive. Only ever gamble with money you can afford to lose. If you or someone you know is struggling with gambling, free and confidential help is available 24/7:
@@ -74,7 +77,7 @@ function App() {
 
       <footer className="w-full max-w-7xl mt-8 pt-6 border-t-2 border-dashed border-line text-sm font-mono text-muted flex flex-wrap gap-4 justify-between">
         <a href="https://keabetswe.online" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center border-2 border-ink bg-ink px-5 py-2 font-bold text-surface hover:bg-accent transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">My Portfolio</a>
-        <span>THE HOUSE ALWAYS WINS</span>
+        <span>Winning picks. A losing backtest.</span>
       </footer>
     </div>
   )

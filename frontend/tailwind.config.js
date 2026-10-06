@@ -10,10 +10,10 @@ export default {
         bg: '#F3F4F6', // light cool gray / thermal paper feel
         surface: '#FFFFFF', // pure white
         ink: '#111827', // near black
-        muted: '#6B7280',
+        muted: '#566174',
         line: '#D1D5DB', // slightly darker for sharp lines
         accent: '#2563EB', // crisp blue
-        cost: '#DC2626', // sharp red for house margin
+        cost: '#B91C1C', // readable red for simulated losses
       },
       fontFamily: {
         sans: ['Space Grotesk', 'system-ui', 'sans-serif'],

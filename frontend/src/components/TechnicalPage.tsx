@@ -219,16 +219,16 @@ export const TechnicalPage: React.FC = () => {
           <div className="font-mono text-xs text-muted uppercase tracking-wider mb-4 border-b border-dashed border-line pb-2">
             Performance by League — {totalBets} total bets across {leagueStats.length} leagues
           </div>
-          <div className="overflow-x-auto bg-surface border-2 border-ink shadow-[6px_6px_0px_0px_rgba(17,24,39,1)]">
+          <div role="region" aria-label="League performance table" tabIndex={0} className="overflow-x-auto bg-surface border-2 border-ink shadow-[6px_6px_0px_0px_rgba(17,24,39,1)]">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-ink text-surface font-mono text-xs uppercase tracking-wider">
-                  <th className="py-3 px-4 font-normal">League</th>
-                  <th className="py-3 px-4 font-normal text-right">Bets</th>
-                  <th className="py-3 px-4 font-normal text-right">Wins</th>
-                  <th className="py-3 px-4 font-normal text-right">Win Rate</th>
-                  <th className="py-3 px-4 font-normal text-right">Net P&L</th>
-                  <th className="py-3 px-4 font-normal w-40">Win Rate Bar</th>
+                  <th scope="col" className="py-3 px-4 font-normal">League</th>
+                  <th scope="col" className="py-3 px-4 font-normal text-right">Bets</th>
+                  <th scope="col" className="py-3 px-4 font-normal text-right">Wins</th>
+                  <th scope="col" className="py-3 px-4 font-normal text-right">Win Rate</th>
+                  <th scope="col" className="py-3 px-4 font-normal text-right">Net P&L</th>
+                  <th scope="col" className="py-3 px-4 font-normal w-40">Win Rate Bar</th>
                 </tr>
               </thead>
               <tbody className="font-mono text-sm divide-y divide-dashed divide-line">
@@ -265,15 +265,15 @@ export const TechnicalPage: React.FC = () => {
           <div className="font-mono text-xs text-muted uppercase tracking-wider mb-4 border-b border-dashed border-line pb-2">
             Season-by-Season P&L
           </div>
-          <div className="overflow-x-auto bg-surface border-2 border-ink shadow-[6px_6px_0px_0px_rgba(17,24,39,1)]">
+          <div role="region" aria-label="Season returns table" tabIndex={0} className="overflow-x-auto bg-surface border-2 border-ink shadow-[6px_6px_0px_0px_rgba(17,24,39,1)]">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-ink text-surface font-mono text-xs uppercase tracking-wider">
-                  <th className="py-3 px-4 font-normal">Season</th>
-                  <th className="py-3 px-4 font-normal text-right">Bets</th>
-                  <th className="py-3 px-4 font-normal text-right">Win Rate</th>
-                  <th className="py-3 px-4 font-normal text-right">Net P&L (Units)</th>
-                  <th className="py-3 px-4 font-normal w-48">P&L Bar</th>
+                  <th scope="col" className="py-3 px-4 font-normal">Season</th>
+                  <th scope="col" className="py-3 px-4 font-normal text-right">Bets</th>
+                  <th scope="col" className="py-3 px-4 font-normal text-right">Win Rate</th>
+                  <th scope="col" className="py-3 px-4 font-normal text-right">Net P&L (Units)</th>
+                  <th scope="col" className="py-3 px-4 font-normal w-48">P&L Bar</th>
                 </tr>
               </thead>
               <tbody className="font-mono text-sm divide-y divide-dashed divide-line">

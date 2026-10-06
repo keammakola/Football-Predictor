@@ -66,7 +66,7 @@ export function ProofOfWork() {
 
       <div>
         <h4 className="text-xl font-bold mb-6">What tools I used</h4>
-        <div className="overflow-x-auto border-2 border-ink bg-surface">
+        <div role="region" aria-label="Tools used table" tabIndex={0} className="overflow-x-auto border-2 border-ink bg-surface">
           <table className="w-full text-left min-w-[640px]">
             <caption className="sr-only">Project tools, their role, and the reasons for choosing them</caption>
             <thead className="bg-ink text-surface text-sm"><tr><th scope="col" className="p-4">Tool</th><th scope="col" className="p-4">What I used it for</th><th scope="col" className="p-4">Why I chose it</th></tr></thead>
