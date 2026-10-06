@@ -18,50 +18,22 @@ interface Bet {
   p_away?: number;
 }
 
-interface Upcoming {
-  date: string;
-  league: string;
-  match: string;
-  pick: string;
-  prob: number;
-  odds_advantage: number | null;
-  qualifies?: boolean;
-  kickoff_utc?: string;
-  status?: string;
-  bookmaker?: string | null;
-}
-
-interface UpcomingStatus {
-  generated_at_utc: string;
-  qualifying_bets: number;
-  leagues: { league: string; status: string; fixtures: number; predictions: number; odds_status: string; error?: string; odds_error?: string }[];
-}
-
 interface Stats {
   strong_hit_rate: number;
 }
 
 export const MainPage: React.FC = () => {
   const [bets, setBets] = useState<Bet[]>([]);
-  const [upcoming, setUpcoming] = useState<Upcoming[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedBet, setExpandedBet] = useState<string | null>(null);
 
-  const [upcomingStatus, setUpcomingStatus] = useState<UpcomingStatus | null>(null);
-  const [upcomingError, setUpcomingError] = useState(false);
-  const [windowStart] = useState(() => Date.now());
-
   useEffect(() => {
     Promise.all([
       fetch('/data/bets.json').then(r => r.json()),
-      fetch('/data/upcoming.json').then(r => { if (!r.ok) throw new Error('Upcoming feed unavailable'); return r.json(); }).catch(() => { setUpcomingError(true); return []; }),
-      fetch('/data/stats.json').then(r => r.json()),
-      fetch('/data/upcoming-status.json').then(r => r.ok ? r.json() : null).catch(() => null)
-    ]).then(([betsData, upcomingData, statsData, upcomingMeta]) => {
+      fetch('/data/stats.json').then(r => r.json())
+    ]).then(([betsData, statsData]) => {
       setBets(betsData);
-      setUpcoming(upcomingData);
-      setUpcomingStatus(upcomingMeta);
       setStats(statsData);
       setLoading(false);
     }).catch(err => {
@@ -69,16 +41,6 @@ export const MainPage: React.FC = () => {
       setLoading(false);
     });
   }, []);
-
-  const generatedAt = Date.parse(upcomingStatus?.generated_at_utc || '');
-  const upcomingUnavailable = upcomingError || !Number.isFinite(generatedAt)
-    || generatedAt > windowStart + 5 * 60 * 1000
-    || windowStart - generatedAt > 12 * 60 * 60 * 1000
-    || upcomingStatus?.leagues.some(feed => feed.status === 'error' || feed.odds_status === 'unavailable');
-  const eligibleUpcoming = upcoming.filter(match => {
-    const kickoff = Date.parse(match.kickoff_utc || '');
-    return !upcomingUnavailable && match.qualifies && kickoff >= windowStart && kickoff <= windowStart + 24 * 60 * 60 * 1000;
-  });
 
   const totalBets = bets.length;
   const totalWins = bets.filter(b => b.won === 1).length;
@@ -115,17 +77,22 @@ export const MainPage: React.FC = () => {
         </a>
       </div>
 
+      <div className="mb-8 border-2 border-ink bg-bg p-6">
+        <p className="font-mono text-xs font-bold uppercase tracking-wider mb-2">Historical experiment</p>
+        <p className="text-ink/80 leading-relaxed">Explore recorded match results, bookmaker odds and model predictions from the backtest. Returns simulate one-unit stakes on completed matches.</p>
+      </div>
+
       {/* Explanation */}
       <div className="mb-8">
         <p className="text-lg font-sans font-medium text-ink bg-bg border-l-4 border-accent p-6">
-          <span className="font-bold text-accent">THE STRATEGY:</span> The historical bets shown below are strictly those where the model had a <strong className="text-ink">&gt;60% confidence</strong> on a strong win, and it only placed the wager if the bookmaker's listed odds were strictly greater than the model's calculated fair odds (Odds &gt; Fair Odds).
+          <span className="font-bold text-accent">THE STRATEGY:</span> The historical bets shown below are strictly those where the model had a <strong className="text-ink">at least 60% confidence</strong> on a strong win, and it only placed the wager if the bookmaker's listed odds were strictly greater than the model's calculated fair odds (Odds &gt; Fair Odds).
         </p>
       </div>
 
       {/* KPI Bar */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         <div className="bg-surface border-2 border-ink p-6 shadow-[4px_4px_0px_0px_rgba(17,24,39,1)]">
-          <div className="font-mono text-sm text-muted uppercase tracking-wider mb-2">Total Bets Made</div>
+          <div className="font-mono text-sm text-muted uppercase tracking-wider mb-2">Simulated Bets</div>
           <div className="font-mono text-4xl font-bold">{totalBets}</div>
         </div>
         <div className="bg-surface border-2 border-ink p-6 shadow-[4px_4px_0px_0px_rgba(17,24,39,1)]">
@@ -136,44 +103,6 @@ export const MainPage: React.FC = () => {
           <div className="font-mono text-sm text-cost uppercase tracking-wider mb-2 font-bold">Net ROI (Profit/Loss)</div>
           <div className="font-mono text-4xl font-bold text-cost">{roi.toFixed(1)}%</div>
           <div className="text-xs font-mono text-cost mt-1">({totalPnl.toFixed(2)} Units)</div>
-        </div>
-      </div>
-
-      {/* Upcoming Matches */}
-      <div className="mb-16">
-        <h3 className="text-2xl font-bold font-sans uppercase tracking-tight mb-6 flex items-center gap-3">
-          Upcoming Identified Bets
-          <span className="bg-ink text-surface font-mono text-xs px-2 py-1">SNAPSHOT</span>
-        </h3>
-        <div className="overflow-x-auto bg-surface border-2 border-ink shadow-[8px_8px_0px_0px_rgba(17,24,39,1)]">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b-2 border-ink font-mono text-xs uppercase text-muted tracking-wider bg-bg">
-                <th className="py-3 px-4 font-normal">Date</th>
-                <th className="py-3 px-4 font-normal">League</th>
-                <th className="py-3 px-4 font-normal">Match</th>
-                <th className="py-3 px-4 font-normal">Prediction</th>
-                <th className="py-3 px-4 font-normal text-right">Confidence</th>
-                <th className="py-3 px-4 font-normal text-right text-accent font-bold">Odds Edge</th>
-              </tr>
-            </thead>
-            <tbody className="font-mono text-sm">
-              {eligibleUpcoming.length === 0 ? (
-                <tr>
-                  <td colSpan={6} className="py-8 px-4 text-center text-muted">{upcomingUnavailable ? 'Upcoming predictions are temporarily unavailable while we refresh the data.' : 'No matches in the next 24 hours meet our 60% confidence threshold with favourable odds.'}</td>
-                </tr>
-              ) : eligibleUpcoming.map((match, i) => (
-                <tr key={i} className="border-b border-dashed border-line hover:bg-bg/50">
-                  <td className="py-4 px-4 text-muted">{match.date}</td>
-                  <td className="py-4 px-4 font-bold">{match.league}</td>
-                  <td className="py-4 px-4 font-sans font-bold">{match.match}</td>
-                  <td className="py-4 px-4"><span className="bg-ink text-surface px-2 py-0.5 text-xs font-bold">{match.pick}</span><span className="block text-xs text-muted mt-2">{match.qualifies ? 'Qualifying bet' : match.odds_advantage === null ? 'Awaiting odds' : 'Outside bet criteria'}</span></td>
-                  <td className="py-4 px-4 text-right">{formatPct(match.prob)}</td>
-                  <td className="py-4 px-4 text-right text-accent font-bold">{match.odds_advantage === null ? '—' : `${match.odds_advantage >= 0 ? '+' : ''}${formatPct(match.odds_advantage)}`}{match.bookmaker && <span className="block text-xs text-muted mt-1">{match.bookmaker}</span>}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </div>
 

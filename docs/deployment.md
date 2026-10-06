@@ -37,49 +37,17 @@ docker compose down
 The generic `Dockerfile` and `Dockerfile.vercel` intentionally share the same
 build and runtime configuration. Keep them in sync when changing the image.
 
-## Updating predictions
+## Historical data deployment
 
-### Automated backend
+The live website at https://betting.keabetswe.online serves fixed, verified
+historical exports from `frontend/public/data/`. It has no live fixture section
+and needs no API credentials, database, scheduled workflow or deployment hook
+for data updates. Both research workflows are manual-only and disabled on GitHub.
 
-`.github/workflows/predictions.yml` runs the Python backend every six hours
-(00:17, 06:17, 12:17, 18:17 UTC), or manually from GitHub Actions. It downloads
-the current season's results, refreshes observed Understat xG, trains league
-models, and fetches fixtures and actual bookmaker odds. Only the two upcoming
-JSON exports are committed; historical evidence and its source hashes remain
-unchanged. Training inputs in the runner are temporary.
-
-One-time setup:
-
-1. Import and deploy the repository in Vercel as described above.
-2. In Vercel **Project Settings → Git → Deploy Hooks**, create a hook for `main`.
-3. In GitHub **Settings → Secrets and variables → Actions**, add repository
-   secrets `ODDS_API_KEY` and `VERCEL_DEPLOY_HOOK` (the complete hook URL).
-4. Enable Actions with read/write repository permissions, then run
-   **Refresh upcoming predictions → Run workflow** to verify the setup.
-
-The workflow requests deployment explicitly through the hook after pushing.
-Treat its URL as a credential. No credentials go into public JSON or the website.
-If a source or model fails, the workflow fails before pushing and the previous
-snapshot stays published. The website hides upcoming bets after 12 hours without
-a successful refresh, and shows a temporary-unavailability message.
-Check failed runs in GitHub Actions; a hook response confirms the deployment
-request, not successful completion of the Vercel build.
-
-Adjust the cron to match your Odds API quota: each run requests one h2h market
-per league with fixtures, across the configured regions. Scheduled Actions can
-be delayed, and GitHub may disable schedules on inactive public repositories.
-Historical backtests are deliberately not rerun on this schedule.
-
-References: [Vercel Deploy Hooks](https://vercel.com/docs/deployments/overview),
-[GitHub scheduled events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
-
-### Manual updates
-
-Deployment serves a data snapshot. Generate fresh data with the Python pipeline,
-commit changes to `frontend/public/data/`, and push them to the connected branch
-so Vercel deploys the new snapshot. The build does not fetch odds or train models.
-Use the root README for refresh commands. Upcoming matches still need fresh
-snapshots as their scheduled dates approach.
+The Python pipeline remains in the repository for reproducibility. To publish a
+new historical experiment, rebuild and verify the backtest and its provenance
+using the root README commands, then commit the matching exports and source
+artifacts together. Pushing changes to `main` deploys the updated website.
 
 ## Static Vite alternative
 

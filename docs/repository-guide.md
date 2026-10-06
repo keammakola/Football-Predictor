@@ -3,7 +3,7 @@
 ## Active website
 
 `frontend/` is the React website. `frontend/public/data/` contains its generated
-historical and upcoming snapshots, including source provenance. These snapshots
+historical snapshots, including source provenance. These snapshots
 are committed so the website can run without Python or private credentials.
 
 ## Modelling and data
@@ -29,7 +29,7 @@ reproducibility and compatibility with the existing scripts.
 `paper_trading.py` and `injury_snapshot.py` support ledger and availability work.
 The Streamlit scripts and earlier daily automation are supporting interfaces.
 The Dockerfiles serve the React website; the React frontend and
-`generate_upcoming.py` are the current website workflow. Keeping these scripts does not imply they have all been validated as
+the verified historical exports are the current website workflow. Keeping these scripts does not imply they have all been validated as
 production entry points.
 
 `tests/` contains isolated fixtures and regression checks. `docs/xg-data.md`

@@ -1,10 +1,8 @@
-# Free daily injury/availability snapshot. Commits new CSVs back to the repo.
+# Optional manual injury/availability research snapshot. No scheduled runs.
 # Test it once with "Run workflow" (workflow_dispatch). If the feed rejects
 # GitHub's servers, run injury_snapshot.py on your own machine instead.
 name: daily-availability-snapshot
 on:
-  schedule:
-    - cron: "0 6 * * *"      # 06:00 UTC daily
   workflow_dispatch:
 permissions:
   contents: write

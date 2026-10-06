@@ -12,7 +12,7 @@ and the reasoning behind the implementation.
   and rest-day features.
 - Evaluates models season by season using earlier seasons for training.
 - Checks exported bet results and odds against historical source CSVs.
-- Generates upcoming predictions from real fixture feeds and bookmaker odds.
+- Presents a fixed historical experiment; the deployed site needs no scheduled jobs.
 
 The frontend is React and TypeScript, built with Vite and Tailwind CSS. The
 modelling pipeline uses Python, pandas, NumPy, SciPy, scikit-learn, and XGBoost.
@@ -26,8 +26,8 @@ npm run dev
 ```
 
 Open the localhost URL printed by Vite. The committed JSON exports allow the
-historical website to run without an API key. The upcoming section displays
-qualifying matches in the next 24 hours; exports are snapshots, not a live feed.
+historical website to run without an API key. All displayed matches and returns
+come from the verified historical backtest exports.
 
 ## Run the modelling pipeline
 
@@ -57,32 +57,15 @@ fetches completed Understat observations and rejects synthetic or altered caches
 See [the xG collection notes](docs/xg-data.md) for source validation, date
 alignment, and feature chronology.
 
-## Private credentials
+## Optional research tools
 
-For current bookmaker odds, set `ODDS_API_KEY` in your environment or create
-`config.local.json` in the project root:
+The Python scripts remain available for reproducing the experiment and exploring
+future predictions locally. The deployed website uses only historical exports;
+it requires no odds API key, database, cron job, or recurring data refresh.
 
-```json
-{"ODDS_API_KEY": "your-api-key"}
-```
-
-The environment variable takes precedence. `config.local.json`, `.env` files,
-and private alert settings in `config.json` are ignored by Git. Use
-`config.example.json` as a template for alert settings. Never commit credentials.
-
-Refresh upcoming predictions with:
-
-```bash
-OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 python generate_upcoming.py
-```
-
-The generator uses separate histories and models for each league. Missing odds
-remain missing, and feed failures are recorded in `upcoming-status.json`.
-
-For deployment, the scheduled GitHub Actions backend refreshes upcoming data
-every six hours and requests a Vercel rebuild. Set `ODDS_API_KEY` and
-`VERCEL_DEPLOY_HOOK` as repository secrets, then run the workflow once.
-See [automated backend setup](docs/deployment.md#automated-backend).
+If using the optional live-odds tools, set `ODDS_API_KEY` in your environment or
+ignored `config.local.json`. Never commit credentials. GitHub workflows are
+manual-only and disabled on the hosted repository.
 
 ## Read the evidence
 

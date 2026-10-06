@@ -1,6 +1,6 @@
 # The Football Experiment website
 
-React and TypeScript frontend for the historical evidence and upcoming matches.
+React and TypeScript frontend for the historical evidence and simulated betting results.
 This is the active website; older prototypes are archived under `docs/archive/`.
 
 ```bash
