@@ -27,6 +27,7 @@ export const MainPage: React.FC = () => {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedBet, setExpandedBet] = useState<string | null>(null);
+  const [visibleCount, setVisibleCount] = useState(50);
 
   useEffect(() => {
     Promise.all([
@@ -109,6 +110,7 @@ export const MainPage: React.FC = () => {
       {/* Historical Bets */}
       <div>
         <h3 className="text-2xl font-bold font-sans uppercase tracking-tight mb-6">Historical Bets Ledger</h3>
+        <p className="text-sm text-muted mb-4">Expand a match to see its scoreline and model probabilities. Show more rows to explore the full ledger.</p>
         <div className="overflow-x-auto bg-surface border-2 border-ink shadow-[8px_8px_0px_0px_rgba(17,24,39,1)]">
           <table className="w-full text-left border-collapse">
             <thead>
@@ -125,7 +127,7 @@ export const MainPage: React.FC = () => {
               </tr>
             </thead>
             <tbody className="font-mono text-sm">
-              {bets.slice(0, 50).map((bet) => (
+              {bets.slice(0, visibleCount).map((bet) => (
                 <React.Fragment key={bet.id}>
                   <tr 
                     onClick={() => setExpandedBet(expandedBet === bet.id ? null : bet.id)}
@@ -133,7 +135,21 @@ export const MainPage: React.FC = () => {
                   >
                     <td className="py-3 px-4 text-muted">{bet.date ? bet.date : bet.season}</td>
                     <td className="py-3 px-4">{bet.league}</td>
-                    <td className="py-3 px-4 font-sans font-bold text-base">{bet.match}</td>
+                    <td className="py-3 px-4 font-sans font-bold text-base">
+                      <button
+                        type="button"
+                        aria-expanded={expandedBet === bet.id}
+                        aria-controls={expandedBet === bet.id ? `match-details-${bet.id}` : undefined}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          setExpandedBet(expandedBet === bet.id ? null : bet.id);
+                        }}
+                        className="text-left hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+                      >
+                        {bet.match}
+                        <span className="block mt-1 font-mono text-xs font-normal text-muted">{expandedBet === bet.id ? '− Hide details' : '+ View details'}</span>
+                      </button>
+                    </td>
                     <td className="py-3 px-4 text-center">
                       <span className="border border-ink px-2 py-0.5 text-xs font-bold">{bet.pick}</span>
                     </td>
@@ -153,7 +169,7 @@ export const MainPage: React.FC = () => {
                   </tr>
                   
                   {expandedBet === bet.id && (
-                    <tr className="bg-bg border-b-2 border-ink">
+                    <tr id={`match-details-${bet.id}`} className="bg-bg border-b-2 border-ink">
                       <td colSpan={9} className="p-0">
                         <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border-l-4 border-accent">
                           <div>
@@ -189,8 +205,17 @@ export const MainPage: React.FC = () => {
               ))}
             </tbody>
           </table>
-          <div className="bg-bg text-center py-4 font-mono text-xs text-muted border-t-2 border-ink">
-            Showing first 50 of {bets.length} historical bets.
+          <div className="bg-bg px-4 py-5 border-t-2 border-ink flex flex-wrap items-center justify-center gap-4">
+            <p aria-live="polite" className="font-mono text-xs text-muted">Showing {Math.min(visibleCount, bets.length)} of {bets.length} historical bets.</p>
+            {visibleCount < bets.length && (
+              <>
+                <button type="button" onClick={() => setVisibleCount(count => Math.min(count + 50, bets.length))} className="border-2 border-ink bg-ink text-surface px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink">Show {Math.min(50, bets.length - visibleCount)} more</button>
+                <button type="button" onClick={() => setVisibleCount(bets.length)} className="border-2 border-ink px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink">Show all {bets.length}</button>
+              </>
+            )}
+            {visibleCount > 50 && (
+              <button type="button" onClick={() => { setVisibleCount(50); setExpandedBet(null); }} className="border-2 border-ink px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink">Show fewer</button>
+            )}
           </div>
         </div>
       </div>
