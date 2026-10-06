@@ -95,3 +95,9 @@ fixtures from Fixture Download, and current odds from The Odds API. These
 datasets and services retain their providers' terms.
 
 [Portfolio](https://keabetswe.online)
+
+## Repository layout
+
+See [the repository guide](docs/repository-guide.md) for active scripts, generated
+artifacts, and supporting tools. Historical design notes and abandoned prototypes
+are preserved in `docs/archive/`; `frontend/` is the active website.

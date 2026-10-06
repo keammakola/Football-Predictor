@@ -1,32 +1,20 @@
-# React + TypeScript + Vite
+# The Football Experiment website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React and TypeScript frontend for the historical evidence and upcoming matches.
+This is the active website; older prototypes are archived under `docs/archive/`.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm ci
+npm run dev
+npm run build
+npm run lint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+`src/App.tsx` contains the shared header, navigation, and footer. `MainPage.tsx`
+shows the overview and ledger; `TechnicalPage.tsx` and `ProofOfWork.tsx` show
+Behind the Model. Shared styles are in `src/index.css` and `tailwind.config.js`.
+
+The frontend reads generated JSON snapshots from `public/data/`. Run the Python
+export scripts from the repository root to update them; see the root README.
+API credentials belong in the Python environment or ignored local config, never
+in frontend code or public exports.

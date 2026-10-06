@@ -124,7 +124,12 @@ export const TechnicalPage: React.FC = () => {
       return da.localeCompare(db);
     });
     let running = 0;
-    return sorted.map(b => { running += b.pnl; return running; });
+    const points: number[] = [];
+    for (const bet of sorted) {
+      running += bet.pnl;
+      points.push(running);
+    }
+    return points;
   }, [bets]);
 
   const maxAbsPnl = useMemo(() => Math.max(...seasonStats.map(s => Math.abs(s.pnl))), [seasonStats]);
