@@ -100,7 +100,7 @@ export const MainPage: React.FC = () => {
           I built a prediction engine for the top five European football leagues. In this historical backtest, its strong predictions had a {stats?.strong_hit_rate?.toFixed(1) ?? '—'}% hit rate. The {totalBets} selected bets won {totalBets > 0 ? ((totalWins / totalBets) * 100).toFixed(1) : '—'}% of the time across {seasonsCount} seasons, including a partial final season, but simulated one-unit stakes returned {roi.toFixed(1)}%. These results show how this model lost money despite winning more often than it lost. They do not establish that every strategy will lose or predict future returns.
         </p>
         <a 
-          href="https://hashnode.com" 
+          href="https://keammakola.hashnode.dev/house-always-wins"
           target="_blank" 
           rel="noreferrer"
           className="inline-block bg-ink text-surface font-mono text-sm font-bold uppercase px-6 py-3 hover:bg-accent transition-colors shadow-[4px_4px_0px_0px_rgba(220,38,38,1)]"
