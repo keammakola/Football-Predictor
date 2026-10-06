@@ -1,11 +1,14 @@
 import sys, os
 from pathlib import Path
+from datetime import datetime, timezone
+from research_run import record_run
 import pandas as pd
 import numpy as np
 import xgboost as xgb
 import warnings
 from sklearn.preprocessing import LabelEncoder
 import config
+from model_spec import FEATURE_COLUMNS, prediction_tier, favourable_price
 import data
 from elo import elo_features
 from xg_scraper import load_xg_data
@@ -23,12 +26,8 @@ def run_backtest_for_season(league_name, test_season_code, matches):
     if test_df.empty or len(train_df) < 100:
         return [], []
         
-    feature_cols = [
-        "elo_diff", "home_xg_roll", "home_xga_roll", "home_xg_ema", "home_xga_ema",
-        "away_xg_roll", "away_xga_roll", "away_xg_ema", "away_xga_ema",
-        "home_rest_days", "away_rest_days", "home_travel_fatigue", "away_travel_fatigue"
-    ]
-    
+    feature_cols = FEATURE_COLUMNS
+
     # 1. Train strict out-of-sample XGBoost model
     le = LabelEncoder()
     le.fit(CLASSES)
@@ -82,22 +81,16 @@ def run_backtest_for_season(league_name, test_season_code, matches):
         probs = {'H': p_home, 'D': p_draw, 'A': p_away}
         sorted_probs = sorted(probs.values(), reverse=True)
         top_p = sorted_probs[0]
-        lead = sorted_probs[0] - sorted_probs[1]
         
         pick = [k for k, v in probs.items() if v == top_p][0]
         
-        tier = "None"
-        if top_p >= 0.60 and lead >= 0.25:
-            tier = "Strong"
-        elif top_p >= 0.50 and lead >= 0.15:
-            tier = "Lean"
-            
+        tier = prediction_tier([p_home, p_draw, p_away])
+
         if tier in ["Strong"]:
-            fair_odds = 1.0 / top_p if top_p > 0 else 0
             odds_taken = odds_h if pick == 'H' else (odds_d if pick == 'D' else odds_a)
             
             # ONLY BET IF IT IS A VALUE BET (Bookmaker Odds > Fair Odds)
-            if odds_taken > fair_odds:
+            if favourable_price(top_p, odds_taken):
                 pnl = -1.0
                 if pick == actual_result:
                     pnl = odds_taken - 1.0
@@ -133,6 +126,7 @@ def run_backtest_for_season(league_name, test_season_code, matches):
     return results, all_match_preds
 
 def run_multi_season_backtest():
+    started_at_utc = datetime.now(timezone.utc).isoformat()
     leagues = ["EPL", "LaLiga", "Bundesliga", "SerieA", "Ligue1"]
     test_seasons = ["2122", "2223", "2324", "2425", "2526", "2627"]
     
@@ -156,12 +150,6 @@ def run_multi_season_backtest():
             season_reg=config.LEAGUES[league_name].get("elo_season_regression", config.ELO_SEASON_REGRESSION)
         )
         
-        feature_cols = [
-            "elo_diff", "home_xg_roll", "home_xga_roll", "home_xg_ema", "home_xga_ema",
-            "away_xg_roll", "away_xga_roll", "away_xg_ema", "away_xga_ema",
-            "home_rest_days", "away_rest_days", "home_travel_fatigue", "away_travel_fatigue"
-        ]
-        
         for season in test_seasons:
             season_results, season_matches = run_backtest_for_season(league_name, season, matches)
             all_results.extend(season_results)
@@ -175,6 +163,7 @@ def run_multi_season_backtest():
     
     df_matches = pd.DataFrame(all_matches)
     df_matches.to_csv("matches.csv", index=False)
+    record_run(started_at_utc)
     
     # Summarize by League
     summary = []

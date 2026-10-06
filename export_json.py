@@ -4,10 +4,12 @@ import json
 import math
 from pathlib import Path
 
+from model_spec import MODEL_VERSION
+
 ROOT = Path(__file__).resolve().parent
 
 
-def main():
+def main(output_dir=None):
     predictions = []
     for row in csv.DictReader((ROOT / 'matches.csv').open()):
         odds = [float(row[f'odds_{name}']) for name in ('home', 'draw', 'away')]
@@ -19,22 +21,24 @@ def main():
         year, month = int(match_date[:4]), int(match_date[5:7])
         start_year = year if month >= 7 else year - 1
         predictions.append({
-            'schema_version': 1,
+            'schema_version': 2,
             'id': f"{row['league']}-{match_date}-{row['home']}-{row['away']}".replace(' ', '-'),
-            'model_version': '1.0', 'date': match_date,
+            'model_version': MODEL_VERSION, 'date': match_date,
             'logged_at_utc': None, 'kickoff_utc': None,
             'league': row['league'], 'season': f'{start_year % 100:02d}{(start_year + 1) % 100:02d}',
             'home': row['home'], 'away': row['away'],
-            **{f'p_{name}': round(float(row[f'p_{name}']), 3) for name in ('home', 'draw', 'away')},
+            **{f'p_{name}': float(row[f'p_{name}']) for name in ('home', 'draw', 'away')},
             **{f'mkt_{name}': round(implied[i] / total, 3) for i, name in enumerate(('home', 'draw', 'away'))},
             **{f'odds_{name}': odds[i] for i, name in enumerate(('home', 'draw', 'away'))},
             'result': row['result'],
         })
-    output = ROOT / 'frontend/public/data/predictions-all.json'
+    output = (Path(output_dir) if output_dir else ROOT / 'frontend/public/data') / 'predictions-all.json'
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(predictions, allow_nan=False))
     print(f'Exported {len(predictions)} predictions with match dates and no invented timestamps.')
 
 
 if __name__ == '__main__':
-    main()
+    # Direct CLI use must publish a complete validated bundle too.
+    from publish_snapshot import main as publish
+    publish()

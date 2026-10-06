@@ -30,3 +30,8 @@ Thumbs.db
 *.log
 
 .vercel/
+
+# New research runs are unpublished until explicitly reviewed and exported.
+/matches.csv
+/bets.csv
+/research-run.json

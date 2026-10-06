@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import log_loss, accuracy_score
 
 import config
+from model_spec import FEATURE_COLUMNS
 import data
 import elo
 import evaluate as ev
@@ -21,14 +22,8 @@ def prepare_data(league_name):
     matches = features.calculate_situational_factors(matches)
     matches = elo.elo_features(matches)
     
-    feature_cols = [
-        "elo_diff", 
-        "home_xg_roll", "home_xga_roll", "home_xg_ema", "home_xga_ema",
-        "away_xg_roll", "away_xga_roll", "away_xg_ema", "away_xga_ema",
-        "home_rest_days", "away_rest_days",
-        "home_travel_fatigue", "away_travel_fatigue"
-    ]
-    
+    feature_cols = FEATURE_COLUMNS
+
     return matches, feature_cols
 
 def train_and_evaluate(league_name):

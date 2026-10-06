@@ -14,7 +14,8 @@ npm run lint
 shows the overview and ledger; `TechnicalPage.tsx` and `ProofOfWork.tsx` show
 Behind the Model. Shared styles are in `src/index.css` and `tailwind.config.js`.
 
-The frontend reads generated JSON snapshots from `public/data/`. Run the Python
-export scripts from the repository root to update them; see the root README.
+The frontend reads generated JSON snapshots from `public/data/`. Use `publish_snapshot.py` from the repository root to update the complete
+validated bundle; see the root README and `docs/snapshot.md`. Do not edit data
+files individually.
 API credentials belong in the Python environment or ignored local config, never
 in frontend code or public exports.

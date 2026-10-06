@@ -1,7 +1,2 @@
-streamlit
-pandas
-numpy
-xgboost
-requests
-scipy
-scikit-learn
+# Tested Linux / Python 3.14 environment, including optional Streamlit tools.
+-r requirements-lock.txt

@@ -85,6 +85,7 @@ export function ProofOfWork() {
           <div className="flex flex-wrap gap-4 pt-3">
             <a href="/data/bets.json" download className="border-2 border-ink bg-surface px-4 py-3 text-ink font-bold hover:bg-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">Download the bet ledger</a>
             <a href="/data/predictions-all.json" download className="border-2 border-ink bg-surface px-4 py-3 text-ink font-bold hover:bg-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">Download match predictions</a>
+            <a href="/data/run-manifest.json" download className="border-2 border-ink bg-surface px-4 py-3 text-ink font-bold hover:bg-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4">Download the run manifest</a>
           </div>
           <p className="text-xs text-muted">The downloadable files are the JSON exports used by the frontend. Model and script filenames above identify the corresponding implementation in the project. The bet export is checked against cached historical source CSVs; source metadata is available above.</p>
         </div>

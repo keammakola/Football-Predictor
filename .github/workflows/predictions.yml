@@ -28,11 +28,11 @@ jobs:
           test -n "$VERCEL_DEPLOY_HOOK" || { echo 'Missing VERCEL_DEPLOY_HOOK repository secret'; exit 1; }
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version-file: .python-version
           cache: pip
       - run: pip install -r requirements.txt
       - name: Verify data safeguards
-        run: python -m unittest discover -s tests -p 'test_*.py'
+        run: python -m pytest tests -q
       - name: Refresh results, observed xG, fixtures and odds
         run: python refresh_predictions.py
       - name: Publish upcoming snapshots only

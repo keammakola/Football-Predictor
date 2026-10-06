@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from pathlib import Path
 
 XG_FEATURES = [f'{side}_{metric}' for side in ('home', 'away') for metric in ('xg_roll', 'xga_roll', 'xg_ema', 'xga_ema')]
 
@@ -35,8 +34,9 @@ def calculate_xg_form(matches_df, xg_df, roll_window=5, ema_span=5):
 
 
 def calculate_situational_factors(df):
-    """
-    Calculates rest days for both teams and adds dummy travel distance / injury factors.
+    """Rest since each team's previous loaded league match, capped at 14 days.
+
+    No injury or travel values are invented when observations are unavailable.
     """
     df = df.copy()
     df = df.sort_values("date")
@@ -62,19 +62,5 @@ def calculate_situational_factors(df):
         
     df["home_rest_days"] = np.clip(home_rest, 0, 14) # Cap at 14 to avoid off-season skew
     df["away_rest_days"] = np.clip(away_rest, 0, 14)
-    
-    # Parse injury snapshots (Mocking this for now as per instructions, or reading from snapshots/)
-    # We will just assign a default score if snapshots are missing
-    df["home_injury_score"] = 1.0
-    df["away_injury_score"] = 1.0
-    
-    snapshot_dir = Path("snapshots")
-    if snapshot_dir.exists():
-        # A real implementation would parse the JSONs based on the date
-        pass
-        
-    # Travel Fatigue (simplified: 1 for away team, 0 for home team, maybe adjust for Europe)
-    df["away_travel_fatigue"] = 1.0
-    df["home_travel_fatigue"] = 0.0
     
     return df

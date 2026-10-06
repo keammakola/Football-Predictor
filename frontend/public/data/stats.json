@@ -1,1 +1,6 @@
-{"strong_hit_rate": 69.3}
+{
+  "strong_hit_rate": 69.2,
+  "strong_predictions": 2169,
+  "strong_correct": 1502,
+  "probability_precision": "rounded_3_decimals"
+}

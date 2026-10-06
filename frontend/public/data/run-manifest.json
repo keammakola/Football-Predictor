@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "historical-2026-10-06-rounded-v1",
+  "recorded_at_utc": "2026-10-06T16:19:01.037531+00:00",
+  "data_exported_at_utc": "2026-10-06T13:46:08.647622+00:00",
+  "evidence_tool_base_commit": "59d031c8266d6c9b77339911f56d628f4a08c069",
+  "evidence_tool_sha256": {
+    "model_spec.py": "0a1292b3bdd74e3c92e504e531d514804bf70e68d7f456be6fec623edfee0214",
+    "backtest.py": "5b6609f07067cdc1fc51561d479d436db87517c66ca80dd3b0cf53fd4106b39f",
+    "features.py": "57a5fc79061b23507e54649ecaf52a2c82d9dc2f6fa24a786364491c89f5e34f",
+    "elo.py": "3d72cf58c310c308f1aef1e109c7fa802d1d50c1b5119f6b969eb2ed33cf9dee",
+    "dixon_coles.py": "2937cca936134f1af8341ac86dfe4a178b328126f79056d210aa0f4bf7460f7d",
+    "export_bets.py": "99d02b7fd1f328176dcfb927935d8569b90d4c92c48276466ca180e686373644",
+    "export_json.py": "69cb8a97203c2508535ec8ac7018d9026eaca6b9b97b3ad4c5d3d6161c72c3e1",
+    "publish_snapshot.py": "cc476722892862981604708a51b02a1bca65a7d03745eafcd9e514028887de12",
+    "research_run.py": "de46c3976c839d651311e9daffa4b4bdd62af157bc8923fde3f3920971ed8007",
+    "data.py": "c4989663f3ec4275f929309fae380b34af5660c330c304d7ce8e7645572430e1",
+    "team_names.py": "cf5612c5b0cab64e83f29069f525602b5df613d6703e14f51c7ce6d4e70a93d2",
+    "xg_scraper.py": "29cab68650f75697c5a019721ce002f04ebd6a0a9c47519a015fe7e6d80454d6",
+    "config.py": "783393b2d59de875003ebd7d83bfd402c5a74bd58df6f036cab3aabc9240ec3d",
+    "requirements-lock.txt": "f8da82eb5d61e41977742dece0eb0606710aabc286968b61f24f26ab37695081"
+  },
+  "forecast_generation_commit": null,
+  "forecast_generation_note": "Generation commit was not recorded; code hashes describe the evidence tools, not a reconstructed training run.",
+  "model_version": "1.0",
+  "feature_columns": [
+    "elo_diff",
+    "home_xg_roll",
+    "home_xga_roll",
+    "home_xg_ema",
+    "home_xga_ema",
+    "away_xg_roll",
+    "away_xga_roll",
+    "away_xg_ema",
+    "away_xga_ema",
+    "home_rest_days",
+    "away_rest_days",
+    "home_travel_fatigue",
+    "away_travel_fatigue"
+  ],
+  "selection_policy": {
+    "min_probability": 0.6,
+    "min_lead": 0.25,
+    "favourable_price": "odds > 1 / probability",
+    "stake_units": 1
+  },
+  "counts": {
+    "predictions": 9157,
+    "selected_bets": 925,
+    "selected_wins": 550,
+    "strong_predictions": 2169,
+    "strong_correct": 1502
+  },
+  "strong_hit_rate": 69.2,
+  "net_units": -47.63,
+  "probability_precision": "rounded_3_decimals",
+  "artifacts_sha256": {
+    "bets.json": "2bdddeb427b713a162a792cd63fb0b1e960047dc6ca756d9f69eb31af591a264",
+    "predictions-all.json": "cc7ef22541294aa7bf1dc873e1c7e17f6f8b47910ee92812b0841ccf62acf308",
+    "stats.json": "0f5692ba8caa1dd44d1ce40482a092baeb13be4a9479f68cec20eeefb06d0cd1",
+    "provenance.json": "5e5115788d9f12a71ea50ea9e55acb614483483f096ec3aaccc4a69345201ac8"
+  },
+  "historical_limitations": [
+    "Predictions were rounded to three decimals before publication.",
+    "Strong-group membership is now computed from the published rounded probabilities.",
+    "Original reported strong hit rate was 69.3%; its full-precision denominator was not preserved.",
+    "Historical selected-bet membership was decided before rounding and is preserved, not reselected.",
+    "This snapshot predates the removal of constant travel features."
+  ]
+}

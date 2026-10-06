@@ -27,8 +27,8 @@ After refreshing, rebuild the results:
 ```bash
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 venv/bin/python train_xgb.py --league all
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 venv/bin/python backtest.py
-python3 export_bets.py
-python3 export_json.py
+venv/bin/python publish_snapshot.py
+venv/bin/python publish_snapshot.py --verify
 ```
 
 Run the collector and chronology checks:

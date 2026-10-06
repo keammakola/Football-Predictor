@@ -14,14 +14,18 @@ commands keep working:
 - `data.py`, `team_names.py`, `xg_scraper.py`, `features.py`: sources and features.
 - `elo.py`, `dixon_coles.py`, `train_xgb.py`: models and training.
 - `backtest.py`, `evaluate.py`, `audit_backtest.py`, `blend_test.py`: evaluation.
-- `export_bets.py`, `export_json.py`: verified historical website exports.
+- `model_spec.py`, `research_run.py`: shared schema/policy and hash-linked run records.
+- `publish_snapshot.py`: supported staged publication and read-only verification.
+- `export_bets.py`, `export_json.py`: implementation helpers for verified exports.
 - `api_fixtures.py`, `live_odds.py`, `generate_upcoming.py`: upcoming predictions.
 - `config.py`: shared settings; private keys are read from ignored local settings
   or environment variables.
 
-`data/raw/` contains cached input observations and xG manifests. Root-level
-`matches.csv`, `bets.csv`, and model JSON files are generated artifacts kept for
-reproducibility and compatibility with the existing scripts.
+`data/raw/` contains cached input observations and xG manifests. New root-level `matches.csv`, `bets.csv` and `research-run.json` are ignored
+generated artifacts. The old conflicting CSVs are labelled under
+`docs/archive/results/legacy-*.csv`. Root model JSON files are historical research
+artifacts; the current seasonal backtest fits its own models. See
+[snapshot notes](snapshot.md) for the distinction between model versions.
 
 ## Supporting tools
 

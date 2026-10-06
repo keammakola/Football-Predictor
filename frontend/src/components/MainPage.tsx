@@ -20,6 +20,8 @@ interface Bet {
 
 interface Stats {
   strong_hit_rate: number;
+  strong_predictions: number;
+  strong_correct: number;
 }
 
 const LEAGUE_LABELS: Record<string, string> = {
@@ -52,6 +54,13 @@ export const MainPage: React.FC = () => {
       read('/data/bets.json'),
       read('/data/stats.json')
     ]).then(([betsData, statsData]) => {
+      if (!Array.isArray(betsData) || !betsData.length || !statsData
+          || !Number.isFinite(statsData.strong_hit_rate)
+          || !Number.isInteger(statsData.strong_predictions) || statsData.strong_predictions <= 0
+          || !Number.isInteger(statsData.strong_correct) || statsData.strong_correct < 0
+          || statsData.strong_correct > statsData.strong_predictions) {
+        throw new Error('Invalid historical evidence');
+      }
       setBets(betsData);
       setStats(statsData);
       setLoading(false);
@@ -99,6 +108,7 @@ export const MainPage: React.FC = () => {
         <p className="text-xl font-sans text-ink/80 leading-relaxed max-w-4xl mb-6">
           I built a prediction engine for the top five European football leagues. In this historical backtest, its strong predictions had a {stats?.strong_hit_rate?.toFixed(1) ?? '—'}% hit rate. The {totalBets} selected bets won {totalBets > 0 ? ((totalWins / totalBets) * 100).toFixed(1) : '—'}% of the time across {seasonsCount} seasons, including a partial final season, but simulated one-unit stakes returned {roi.toFixed(1)}%. These results show how this model lost money despite winning more often than it lost. They do not establish that every strategy will lose or predict future returns.
         </p>
+        {stats && <p className="text-sm text-muted mb-6">Strong group: {stats.strong_correct.toLocaleString()} correct outcomes from {stats.strong_predictions.toLocaleString()} predictions, using the published probabilities.</p>}
         <a 
           href="https://keammakola.hashnode.dev/house-always-wins"
           target="_blank" 

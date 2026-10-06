@@ -9,6 +9,7 @@ import xgboost as xgb
 from sklearn.preprocessing import LabelEncoder
 
 import config
+from model_spec import FEATURE_COLUMNS, prediction_tier, favourable_price
 from data import load_matches
 from elo import elo_features
 from xg_scraper import load_xg_data
@@ -17,7 +18,7 @@ from api_fixtures import fetch_upcoming_fixtures
 from live_odds import get_live_odds
 from dixon_coles import fit_dixon_coles, predict_match
 
-FEATURES = ['elo_diff', 'home_xg_roll', 'home_xga_roll', 'home_xg_ema', 'home_xga_ema', 'away_xg_roll', 'away_xga_roll', 'away_xg_ema', 'away_xga_ema', 'home_rest_days', 'away_rest_days', 'home_travel_fatigue', 'away_travel_fatigue']
+FEATURES = FEATURE_COLUMNS
 
 
 def predict_league(league, fixtures, odds, now):
@@ -61,9 +62,9 @@ def predict_league(league, fixtures, odds, now):
         if price is not None and (not np.isfinite(price) or price <= 1):
             price = None
         edge = probability - 1 / price if price else None
-        strong = probability >= .60 and probability - ranked[1][1] >= .25
+        strong = prediction_tier(probabilities.values()) == "Strong"
         kickoff_utc = market['kickoff_utc'] if market is not None else row['_fixture_kickoff'].isoformat()+'Z'
-        output.append({'date': kickoff_utc[:10], 'kickoff_utc': kickoff_utc, 'league': league, 'match': f'{row.HomeTeam} vs {row.AwayTeam}', 'pick': {'H': 'Home', 'D': 'Draw', 'A': 'Away'}[pick], 'prob': round(float(probability), 3), 'odds_advantage': round(float(edge), 3) if edge is not None else None, 'odds': price, 'qualifies': bool(strong and edge is not None and edge > 0), 'status': 'awaiting_odds' if edge is None else 'qualifying' if strong and edge > 0 else 'outside_criteria', 'bookmaker': market['bookmaker'] if market is not None else None, 'fixture_source': row['source_url'], 'trained_through': history['date'].max().strftime('%Y-%m-%d')})
+        output.append({'date': kickoff_utc[:10], 'kickoff_utc': kickoff_utc, 'league': league, 'match': f'{row.HomeTeam} vs {row.AwayTeam}', 'pick': {'H': 'Home', 'D': 'Draw', 'A': 'Away'}[pick], 'prob': round(float(probability), 3), 'odds_advantage': round(float(edge), 3) if edge is not None else None, 'odds': price, 'qualifies': bool(strong and price is not None and favourable_price(probability, price)), 'status': 'awaiting_odds' if edge is None else 'qualifying' if strong and edge > 0 else 'outside_criteria', 'bookmaker': market['bookmaker'] if market is not None else None, 'fixture_source': row['source_url'], 'trained_through': history['date'].max().strftime('%Y-%m-%d')})
     return output
 
 
